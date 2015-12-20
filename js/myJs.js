@@ -1,5 +1,6 @@
 $(document).ready(function (){
 console.log("Where the fuck is that data1?");
+/*
 $.ajax({
     url: 'https://mager-spotify-web.p.mashape.com/search/1/track.json?q=Call%2BMe%2BMaybe', // The URL to the API. You can get this in the API page of the API you intend to consume
     type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
