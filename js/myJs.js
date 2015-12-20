@@ -1,5 +1,5 @@
 $(document).ready(function (){
-console.log("Where the fuck is that data1?");
+alert("Where the fuck is that data1?");
 
 
 $.ajax({
