@@ -1,4 +1,5 @@
 $(document).ready(function (){
+  /*
 alert("Where the fuck is that data1?");
 
 
@@ -7,7 +8,7 @@ $.ajax({
     type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
     data: {}, // Additional parameters here
     dataType: 'json',
-    success: function(data) { 
+    success: function(data) {
         console.log("success");
         console.dir((data)); },
     error: function(err) { alert(err); },
@@ -23,11 +24,11 @@ unirest.get("https://mager-spotify-web.p.mashape.com/search/1/track.json?q=Call%
 .end(function (result) {
   console.log(result.status, result.headers, result.body);
 });
-*/
+
 $("table").find("td").on("click", function(){
 
 $(this).css("background-color","#e5e5e5");
 
 })
-
+*/
 })
