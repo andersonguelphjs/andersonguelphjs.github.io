@@ -11,22 +11,23 @@
 </head>
 
 <body>
-    <div class="container">
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#Q1" aria-controls="Q1" role="tab" data-toggle="tab">Q1</a></li>
-        <li role="presentation"><a href="#Q2" aria-controls="Q2" role="tab" data-toggle="tab">Q2</a></li>
-        <li role="presentation"><a href="#Q3" aria-controls="Q3" role="tab" data-toggle="tab">Q3</a></li>
-        <li role="presentation"><a href="#Q4" aria-controls="Q4" role="tab" data-toggle="tab">Q4</a></li>
-      </ul>
+  <div class="container">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#Q1" aria-controls="Q1" role="tab" data-toggle="tab">Q1</a></li>
+      <li role="presentation"><a href="#Q2" aria-controls="Q2" role="tab" data-toggle="tab">Q2</a></li>
+      <li role="presentation"><a href="#Q3" aria-controls="Q3" role="tab" data-toggle="tab">Q3</a></li>
+      <li role="presentation"><a href="#Q4" aria-controls="Q4" role="tab" data-toggle="tab">Q4</a></li>
+    </ul>
 
-      <!-- Tab panes -->
-      <div class="tab-content">
+    <!-- Tab panes -->
+    <div class="tab-content">
 
-        <div role="tabpanel" class="tab-pane active" id="Q1"><!-- -->
-          <div class="row">
-            <div class="col-md-12">
-              <pre>function doQuestion1() {
+      <div role="tabpanel" class="tab-pane active" id="Q1">
+        <!-- -->
+        <div class="row">
+          <div class="col-md-12">
+            <pre>function doQuestion1() {
             var arr = [23, 46, 34, 76],
                 total = 0;
 
@@ -38,38 +39,40 @@
 
         }
                 </pre>
-            </div>
-            <div class="col-md-12">
-              <button id="question1" class="btn btn-default" type="submit">Run Code</button>
-            </div>
-            <div class="col-md-12">
-              <div id="answerQuestion1"></div>
-            </div>
-
           </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="Q2">
+          <div class="col-md-12">
+            <button id="question1" class="btn btn-default" type="submit">Run Code</button>
+          </div>
+          <div class="col-md-12">
+            <div id="answerQuestion1"></div>
+          </div>
 
         </div>
-        <div role="tabpanel" class="tab-pane" id="Q3">
+      </div>
+      <div role="tabpanel" class="tab-pane" id="Q2">
 
-        </div>
-        <div role="tabpanel" class="tab-pane" id="Q4">
+      </div>
+      <div role="tabpanel" class="tab-pane" id="Q3">
 
-        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="Q4">
 
-    </div><!-- end tab-content-->
+      </div>
+
+    </div>
+    <!-- end tab-content-->
 
 
-  </div><!-- end container-->
+  </div>
+  <!-- end container-->
   <script>
-  //wait for DOM to load
+    //wait for DOM to load
     $(document).ready(function() {
-//code for Q1
+      //code for Q1
       function doQuestion1() {
         var arr = [23, 46, 34, 76],
           total = 0;
-//go through each item in the array
+        //go through each item in the array
         for (var i = 0; i < arr.length; i++) {
           //add to the total
           total += arr[i];
@@ -78,10 +81,10 @@
         $("#answerQuestion1").html(total);
       }
 
-      function doQuestion2 () {
+      function doQuestion2() {
 
       }
-//when user clicks this button, call doQuestion1
+      //when user clicks this button, call doQuestion1
       $("#question1").on("click", function() {
         doQuestion1();
       })
