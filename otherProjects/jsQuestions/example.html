@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Questions1</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <pre>function doQuestion1() {
+    var arr = [23, 46, 34, 76],
+        total = 0;
+
+    for (var i = 0; i < arr.length; i++) {
+        total += arr[i];
+
+    }
+    $("#answerQuestion1").html(total);
+
+}
+        </pre>
+        <button id="question1" class="btn btn-default" type="submit">Button</button>
+
+
+      </div>
+      <br/>
+      <div id="answerQuestion1"></div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function() {
+
+      function doQuestion1() {
+        var arr = [23, 46, 34, 76],
+          total = 0;
+
+        for (var i = 0; i < arr.length; i++) {
+          total += arr[i];
+        }
+        $("#answerQuestion1").html(total);
+      }
+
+      $("#question1").on("click", function() {
+        doQuestion1();
+      })
+
+    })
+  </script>
+</body>
+
+</html>

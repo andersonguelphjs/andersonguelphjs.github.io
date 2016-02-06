@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Week 5 Questions</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#Q1" aria-controls="Q1" role="tab" data-toggle="tab">Q1</a></li>
+        <li role="presentation"><a href="#Q2" aria-controls="Q2" role="tab" data-toggle="tab">Q2</a></li>
+        <li role="presentation"><a href="#Q3" aria-controls="Q3" role="tab" data-toggle="tab">Q3</a></li>
+        <li role="presentation"><a href="#Q4" aria-controls="Q4" role="tab" data-toggle="tab">Q4</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+
+        <div role="tabpanel" class="tab-pane active" id="Q1"><!-- -->
+          <div class="row">
+            <div class="col-md-12">
+              <pre>function doQuestion1() {
+            var arr = [23, 46, 34, 76],
+                total = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                total += arr[i];
+
+            }
+            $("#answerQuestion1").html(total);
+
+        }
+                </pre>
+            </div>
+            <div class="col-md-12">
+              <button id="question1" class="btn btn-default" type="submit">Run Code</button>
+            </div>
+            <div class="col-md-12">
+              <div id="answerQuestion1"></div>
+            </div>
+
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="Q2">
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="Q3">
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="Q4">
+
+        </div>
+
+    </div><!-- end tab-content-->
+
+
+  </div><!-- end container-->
+  <script>
+  //wait for DOM to load
+    $(document).ready(function() {
+//code for Q1
+      function doQuestion1() {
+        var arr = [23, 46, 34, 76],
+          total = 0;
+//go through each item in the array
+        for (var i = 0; i < arr.length; i++) {
+          //add to the total
+          total += arr[i];
+        }
+        //display the answer on the screen by replacing the html of #answerQuestion1 with total
+        $("#answerQuestion1").html(total);
+      }
+
+      function doQuestion2 {
+
+      }
+//when user clicks this button, call doQuestion1
+      $("#question1").on("click", function() {
+        doQuestion1();
+      })
+
+      $("#question2").on("click", function() {
+        doQuestion2();
+      })
+
+    })
+  </script>
+</body>
+
+</html>
