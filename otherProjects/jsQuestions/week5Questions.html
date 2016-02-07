@@ -27,17 +27,29 @@
         <!-- -->
         <div class="row">
           <div class="col-md-12">
-            <pre>function doQuestion1() {
+            <pre>
+            //this function adds up the values of an array and
+            //displays it to the screen
+            //
+            function doQuestion1() {
             var arr = [23, 46, 34, 76],
                 total = 0;
 
+            //for each value in the array
             for (var i = 0; i < arr.length; i++) {
+                //add to the total
                 total += arr[i];
 
             }
+            //write the total to the results div
             $("#answerQuestion1").html(total);
 
-        }
+            }
+
+            //user clicks button
+            $("#question1").on("click", function() {
+              doQuestion1();
+            })
                 </pre>
           </div>
           <div class="col-md-12">
@@ -50,7 +62,19 @@
         </div>
       </div>
       <div role="tabpanel" class="tab-pane" id="Q2">
+        <div class="row">
+          <div class="col-md-12">
+            <pre>//will put code here
+                </pre>
+          </div>
+          <div class="col-md-12">
+            <button id="question2" class="btn btn-default" type="submit">Run Code</button>
+          </div>
+          <div class="col-md-12">
+            <div id="answerQuestion2"></div>
+          </div>
 
+        </div>
       </div>
       <div role="tabpanel" class="tab-pane" id="Q3">
 
