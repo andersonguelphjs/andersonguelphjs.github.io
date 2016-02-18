@@ -47,7 +47,7 @@ $(document).ready(function() {
       ]
     };
 
-  $("#board div").on("click", function() {
+  $("#board").find("div").on("click", function() {
     var selection;
 
     if (isInProgress && $(this).hasClass("empty")) {
@@ -85,7 +85,6 @@ $(document).ready(function() {
         for (var j = 0; j < arr[i].length; j++) {
           if (!$("#board div").eq(arr[i][j]).hasClass(selection)) {
             valid = false;
-            //return false;
           }
         }
         if (valid) {
