@@ -68,12 +68,12 @@ $(document).ready(function() {
   $("#newGame").on("click", function() {
 
     var divs = $("#board").find("div"),
-      empty = $(".container").find(".nine").filter(function() { //bonus Explain what each one of these functions does
+      emptyDiv = $(".container").find(".nine").filter(function() { //bonus Explain what each one of these functions does
         return $.trim($(this).text()) === "" && $(this).children().length === 0;
       }).not("board").first();
 
-    if (empty.length == 1) { //what is this if statement doing?
-      empty.html($("#board").html());
+    if (emptyDiv.length == 1) { //what is this if statement doing?
+      emptyDiv.html($("#board").html());
     } else {
       $(".container").find(".nine").not("#board").empty();
     }
