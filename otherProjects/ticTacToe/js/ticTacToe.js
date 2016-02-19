@@ -67,7 +67,16 @@ $(document).ready(function() {
   // Explain what this event does
   $("#newGame").on("click", function() {
 
-    var divs = $("#board").find("div");
+    var divs = $("#board").find("div"),
+      empty = $(".container").find(".nine").filter(function() { //bonus Explain what each one of these functions does
+        return $.trim($(this).text()) === "" && $(this).children().length === 0;
+      }).not("board").first();
+
+    if (empty.length == 1) { //what is this if statement doing?
+      empty.html($("#board").html());
+    } else {
+      $(".container").find(".nine").not("#board").empty();
+    }
 
     //Explain this each function
     divs.each(function() {
