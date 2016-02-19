@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   var isO = true, // what does this variable represent
     isInProgress = true, // what does this variable represent
-    combos = { // what does this variable represent; explain the keys and values
+    combos = { // what does this variable represent; explain what the keys and values represent
       0: [
         [1, 2],
         [3, 6],
@@ -101,6 +101,7 @@ $(document).ready(function() {
         }
         if (valid) { //Explain the condition and every line in the block
           alert("Winner is " + selection.toUpperCase() + "!");
+          $("#board").find("." + selection).css("color", "green");
           isInProgress = false;
           return false; //this exits the loop
         }
