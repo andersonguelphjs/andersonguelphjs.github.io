@@ -67,20 +67,20 @@ $(document).ready(function() {
   // Explain what this event does
   $("#newGame").on("click", function() {
 
-    var squares = $("#board").find("div"); //what is this variable
-    var firstEmptySquare = $(".container").find(".nine").filter(function() { //bonus Explain what filter does
+    var boardSquares = $("#board").find("div"); //what is this variable
+    var firstEmptyMemorySquare = $(".container").find(".nine").filter(function() { //bonus Explain what filter does
       return $.trim($(this).text()) === "" && $(this).children().length === 0;
     }).not("#board").first();
 
-    if (firstEmptySquare.length == 1) { //what is this if statement doing?
-      firstEmptySquare.html($("#board").html());
+    if (firstEmptyMemorySquare.length == 1) { //what is this if statement doing?
+      firstEmptyMemorySquare.html($("#board").html());
     } else {
       $(".container").find(".nine").not("#board").empty();
       $(".container").find(".nine").first().html($("#board").html());
     }
 
     //Explain this each function
-    squares.each(function() {
+    boardSquares.each(function() {
       $(this).addClass("empty").empty();
     })
     isGameInProgress = true;
