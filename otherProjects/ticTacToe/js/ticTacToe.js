@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var isCircle = true; // what does this variable represent
+  var circleOrEx = "o"; // what does this variable represent
   var isGameInProgress = true; // what does this variable represent
   var winningCombos = { // what does this variable represent; explain what the keys and values represent
     0: [ //0 is key
@@ -50,18 +50,16 @@ $(document).ready(function() {
   // Explain what this event does
   $("#board").find("div").on("click", function() {
 
-    var circleOrEx;
-
     if (isGameInProgress && $(this).hasClass("empty")) { /// Explain these conditions
-      if (isCircle) { //Explain this condition
-        circleOrEx = "o";
-        $(this).removeClass("empty").addClass(circleOrEx).append("<span class='circle'>o</span"); //Explain what is happening here
-      } else {
-        circleOrEx = "x";
-        $(this).removeClass("empty").addClass(circleOrEx).append("<span class='eX'>x</span>");
-      }
-      isCircle = !isCircle; //Explain
+      $(this).removeClass("empty").append("<span class='" + circleOrEx + "'>" + circleOrEx + "</span");
+
       checkIfWon($(this).index(), circleOrEx); //Explain
+
+      if (circleOrEx === "o") {
+        circleOrEx = "x";
+      } else {
+        circleOrEx = "o";
+      }
     }
 
   });
@@ -69,52 +67,51 @@ $(document).ready(function() {
   // Explain what this event does
   $("#newGame").on("click", function() {
 
-    var divs = $("#board").find("div"); //what is this variable
-    var emptyDiv = $(".container").find(".nine").filter(function() { //bonus Explain what filter does
+    var squares = $("#board").find("div"); //what is this variable
+    var firstEmptySquare = $(".container").find(".nine").filter(function() { //bonus Explain what filter does
       return $.trim($(this).text()) === "" && $(this).children().length === 0;
     }).not("#board").first();
 
-    if (emptyDiv.length == 1) { //what is this if statement doing?
-      emptyDiv.html($("#board").html());
+    if (firstEmptySquare.length == 1) { //what is this if statement doing?
+      firstEmptySquare.html($("#board").html());
     } else {
       $(".container").find(".nine").not("#board").empty();
       $(".container").find(".nine").first().html($("#board").html());
     }
 
     //Explain this each function
-    divs.each(function() {
-      $(this).removeClass("o").removeClass("x").addClass("empty").empty();
+    squares.each(function() {
+      $(this).addClass("empty").empty();
     })
     isGameInProgress = true;
   })
 
   //Explain this funciton, describe the parameters; what are the possible values of the paramaters
-  function checkIfWon(i, circleOrEx) {
+  function checkIfWon(chosenSquare) {
 
-    var mulitArr = winningCombos[i];
+    var mulitArr = winningCombos[chosenSquare];
     var playerWon;
 
-    if (mulitArr && mulitArr.length > 0) { //Explain this condition; is it really necessary?
-      for (var i = 0; i < mulitArr.length; i++) { //Explain this nested for loop
-        playerWon = true;
-        for (var j = 0; j < mulitArr[i].length; j++) {
-          if (!$("#board").find("div").eq(mulitArr[i][j]).hasClass(circleOrEx)) { //Explain this condition
-            playerWon = false;
-          }
-        }
-
-        if (playerWon) { //Explain the condition and every line in the block
-          alert("Winner is " + circleOrEx.toUpperCase() + "!");
-          if (circleOrEx == "o") {
-            $("#board").find(".circle").css("color", "green");
-          } else {
-            $("#board").find(".eX").css("color", "green");
-          }
-          isGameInProgress = false;
-          return false; //this exits the loop 
+    for (var i = 0; i < mulitArr.length; i++) { //Explain this nested for loop
+      playerWon = true;
+      for (var j = 0; j < mulitArr[i].length; j++) {
+        if (!$("#board").find("div").eq(mulitArr[i][j]).find("span").hasClass(circleOrEx)) { //Explain this condition
+          playerWon = false;
         }
       }
+
+      if (playerWon) { //Explain the condition and every line in the block
+
+        for (var j = 0; j < mulitArr[i].length; j++) {
+          $("#board").find("div").eq(mulitArr[i][j]).find("." + circleOrEx).addClass("green"); //Explain this condition
+        }
+        $("#board").find("div").eq(chosenSquare).find("." + circleOrEx).addClass("green");
+        alert("Winner is " + circleOrEx.toUpperCase() + "!");
+        isGameInProgress = false;
+        return false; //this exits the loop
+      }
     }
+
 
   }
 })
