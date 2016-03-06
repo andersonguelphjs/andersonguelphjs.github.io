@@ -60,6 +60,3 @@ $(document).ready(function() {
   })
 
 })//end doc ready
-<input id="mySingleLineText"  type="text" value="Type here">
-
-$("#mySingleLineText").val("");
