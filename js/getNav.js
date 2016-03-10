@@ -8,7 +8,8 @@ $(document).ready(function() {
 
     //if so add nav.html contents to the top
     if (container) {
-      $(".container").prepend(data).fadeIn();
+      container.prepend(data)
+      container.fadeIn();
     }
 
   });
