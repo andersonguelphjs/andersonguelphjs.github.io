@@ -1,11 +1,16 @@
 $(document).ready(function() {
 
+//get the file (replace with your own url)
   $.get("http://andersonguelphjs.github.io/partials/nav.html", function(data) {
 
-var container =   $(".container");
-if (container){
-    $(".container").prepend(data);
-}
+//check if this document has .conatiner
+    var container = $(".container");
+
+    //if so add nav.html contents to the top
+    if (container) {
+      $(".container").prepend(data);
+    }
+
   });
 
 });
