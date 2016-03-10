@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $.get("partials/nav.html", function(data) {
+  $.get("http://andersonguelphjs.github.io/partials/nav.html", function(data) {
 
 var container =   $(".container");
 if (container){
