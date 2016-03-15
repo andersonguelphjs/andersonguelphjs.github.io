@@ -1,17 +1,22 @@
-$("#getClients").on("click", function() {
+$(document).ready(function() {
 
-var url = "http://andersonguelphjs.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json";
+    $("#getClients").on("click", function() {
 
-$.getJSON(url, function (data){
+        var url = "http://andersonguelphjs.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json";
 
-alert(data);
-console.dir(data);
+        $.getJSON(url, function(data) {
 
-})
+            $.each(data, function(index, item){
+                $("#data").append(item.name);
+            })
+            //alert(data);
+            //console.dir(data);
 
-})
+          }) //getJSON
 
+      }) //click
 
+  }) //ready
 
 
 
