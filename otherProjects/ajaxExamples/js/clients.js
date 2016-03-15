@@ -1,3 +1,30 @@
+
+
+alert("working");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 $("#getClients").click(function() {
   //will not work locally with Chrome (use Safari, FF)
   $.getJSON("jsonDatabase/clients.json", function(data) {
@@ -22,3 +49,4 @@ $("#getClients").click(function() {
 });//click
 
 //to look at a JSON file clearly copy teh contents of clients.json into http://www.jsoneditoronline.org/
+*/
