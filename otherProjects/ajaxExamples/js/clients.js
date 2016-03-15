@@ -1,6 +1,13 @@
 $("#getClients").on("click", function() {
 
-  alert("working");
+var url = "http://andersonguelphjs.github.io/otherProjects/ajaxExamples/jsonDatabase/clients.json";
+
+$.getJSON(url, function (data){
+
+alert(data);
+console.dir(data);
+
+})
 
 })
 
