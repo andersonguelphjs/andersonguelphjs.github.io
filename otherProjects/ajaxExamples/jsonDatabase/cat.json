@@ -19,7 +19,7 @@
   "rate": "Premium"
 }, {
   "name": "ROCKY",
-  "url": "images/cat.jpg",
+  "url": "images/cat1.jpg",
   "comments": [{
     "renter": "Opotexic",
     "comment": "DO NOT RENT THIS CAT!!",
@@ -38,7 +38,7 @@
   "rate": "Discount"
 }, {
   "name": "SASHA",
-  "url": "images/cat.jpg",
+  "url": "images/cat2.jpg",
   "comments": [{
     "renter": "Burgense",
     "comment": "Cute but killed my mouse!",

@@ -1,9 +1,27 @@
-$.getJSON("http://andersonguelphjs.github.io/otherProjects/ajaxExamples/jsonDatabase/cat.json", function(data) {
+$.getJSON("jsonDatabase/cat.json", function(data) {
 
   $(document).ready(function() {
+console.dir(data);
+var html="";
 
-    $("#cats").append(data);
-    console.dir(data);
+$.each(data, function(index, item){
+  html+='<div class="col-md-4">'+
+  '<div class="catName">'+item.name+'</div>'+
+  '<img src="'+item.url+'">'+
+  '</div>';
+  /*
+  '<div class="commentsContainer">'+
+'<div class="comment">'+
+'<div class="renterName">'+item.+'</div>'+
+'<div class="renterComment">'+item.+'</div>'+
+'</div>'+
+  '</div>'+
+*/
+
+})
+
+    $("#cats").append(html);
+
   })
 
 })
