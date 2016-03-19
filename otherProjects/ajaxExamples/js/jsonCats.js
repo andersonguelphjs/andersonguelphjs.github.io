@@ -3,7 +3,7 @@ $.getJSON("http://andersonguelphjs.github.io/otherProjects/ajaxExamples/jsonData
 $(document).ready(function(data){
 
 $("#cats").append(data);
-
+console.dir(data);
 })
 
 })
