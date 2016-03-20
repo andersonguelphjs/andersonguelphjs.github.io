@@ -4,7 +4,6 @@ $.getJSON("jsonDatabase/cat.json", function(data) {
         console.dir(data);
         var html = "";
 
-
         $.each(data, function(index, item) {//for each cat)
             html += '<div class="col-md-4">' +
             //cat details
@@ -25,7 +24,7 @@ $.getJSON("jsonDatabase/cat.json", function(data) {
                   '<div class="renterName"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>' + i.renter + '</div>' +
                   '<div class="renterComment">' + i.comment + '</div>' +
                   '<div class="star">';
-              
+
                 for (var j = 1; j <= 5; j++) {//each star; how many full or empty stars (based on json field)
                   if (j <= Number(i.star)) {
                     html += '<img class="starImg" src="images/fullStar.png">';
