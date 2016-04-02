@@ -116,8 +116,8 @@ $(document).ready(function() {
       alert("send to databse: " + JSON.stringify(order));
 
       //show success message
-      $("#pageContent").append("<div class='col-md-12 text-success'>Order Received!<br/><br/>" +
-        order.catSelect + " will be delivered on " + order.startRentDate + "<img id='paws' src='images/catPaws.jpeg'></div>");
+      $("#successMsg").html("Order Received!<br/><br/>" +
+        order.catSelect + " will be delivered on " + order.startRentDate + "<img id='paws' src='images/catPaws.jpeg'>");
     }
 
     //begin the program, get the homepage
