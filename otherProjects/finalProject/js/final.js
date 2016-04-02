@@ -40,7 +40,7 @@ $(document).ready(function() {
                   '<div class="panel-heading">Renter Comments</div>'; //added
                 $.each(item.comments, function(ind, i) {
                     html += '<div class="panel-body">' + //added
-                      '<div class="renterName">' + i.username + '</div>' +
+                      '<div class="renterName"><small>' + i.username + '</small></div>' +
                       '<div class="renterComment">' + i.comment + '</div>' +
                       '<div class="renterStars">';
 
