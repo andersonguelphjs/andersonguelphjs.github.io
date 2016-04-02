@@ -8,13 +8,16 @@ $(document).ready(function() {
         //add active class to clicked li
         $(this).addClass("active");
 
+        //get the correct page according to click
         var page = $(this).attr("id");
         getPartial(page);
 
       }) //click
 
+//get the parital via JSON, add to page, activiate associating js
     function getPartial(partial) {
-$("#pageContent").hide();
+      $("#pageContent").hide();
+
       if (partial == "homePage") { //ajax get home.html
         $.get("partials/home.html", function(data) {
           $("#pageContent").html(data);
@@ -24,11 +27,10 @@ $("#pageContent").hide();
         //paste the getJSON here; change the append id; change the file name
         $.getJSON("jsonDatabase/finalCats.json", function(data) {
 
-            console.dir(data);
             var html = "";
 
             $.each(data, function(index, item) {
-                html += '<div class="col-md-4">' +
+                html += '<div class="col-md-4 jsonCat">' +
                   '<div class="catName">' + item.name + '</div>' +
                   '<div class="catType"><small>type </small>' + item.type + '</div>' +
                   '<div class="catGender"><small>gender </small>' + item.gender + '</div>' +
@@ -61,66 +63,61 @@ $("#pageContent").hide();
             $("#pageContent").html(html);
           }) //getJSON
       } else if (partial == "orderPage") { //ajax get order.html
-        $.get("partials/order.html", function(data) {
+        $.get("partials/order2.html", function(data) {
             $("#pageContent").html(data);
-            //put the takeAnOrder.js here (inside get)
-            //change button text
-            $("#myButton").on("mouseenter", function() {
-                $("#log").append("<br>Button mouseenter");
-                $(this).text("ORDER NOW!!!");
-              })
-              .on("mouseleave", function() {
-                $("#log").append("<br>Button mouseleave");
-                $(this).text("Click Me!");
-              });
 
+            //activate the datepicker
+            $('#startRentDate, #endRentDate').datepicker({});
 
-            //change the backgrund color on focus, blue
-            $("#mySingleLineText").on("focus", function() {
-                $("#log").append("<br>input focus");
-                $(this).css("background-color", "#F7F8E0");
-              })
-              .on("blur", function() {
-                $("#log").append("<br>input blur");
-                $(this).css("background-color", "#FFF");
-              });
+            //user clicks submit
+            $("#submitButton").on("click", function() {
 
-            //give the user a message about their selection
-            $("#mySelect").on("change", function() {
+              //add the error class to empty inputs
+              $("input, select").filter(function() {
+                return !this.value;
+              }).closest("div").addClass("has-error")
 
-              var val = $(this).val();
-              $("#log").append("<br>select change");
-              $("#mySelectMessage").html(val + " is a nice selection!");
+              //remove the error class from all filled inputs
+              $("input, select").filter(function() {
+                return this.value;
+              }).closest("div").removeClass("has-error");
 
-            });
+              //get all errors
+              var hasError = $(".has-error");
 
-            //user clicks the button
-            $("#myButton").on("click", function() {
+              //if no errors
+              if (hasError.length < 1) {
+                sendConfirmation();
+                console.log("error free");
+              }
 
-              $("#log").append("<br>User clicked the button");
-
-              var userOrder = {};
-
-              userOrder.myInput = $("#mySingleLineText").val();
-              userOrder.myTextarea = $("#myTextarea").val();
-              userOrder.mySelect = $("#mySelect").val();
-              userOrder.myRadio = $("[name='gender']:checked").val();
-              userOrder.myCheckValues = [];
-
-              $("[name='vehicle']:checked").each(function() {
-                userOrder.myCheckValues.push($(this).val());
-              });
-
-              $("#log").append("<br>Value of input is: " + userOrder.myInput);
-              $("#log").append("<br>Value of textarea is: " + userOrder.myTextarea);
-              $("#log").append("<br>Value of select is: " + userOrder.mySelect);
-              $("#log").append("<br>Value of radio button is: " + userOrder.myRadio);
-              $("#log").append("<br>Value of checks is: " + userOrder.myCheckValues.join());
-              $("#log").append("<br><br>Value of userOrder is: " + JSON.stringify(userOrder));
             })
+
           }) //get
       }
-$("#pageContent").fadeIn();
+      $("#pageContent").fadeIn();
+    }
+
+    //do when order valid
+    function sendConfirmation() {
+
+      var order = {};
+
+      //get all input valuesnto object
+      var inputs = $("input, select");
+
+      //put all the input values into object ; this each can be done with jquery objects
+      inputs.each(function() {
+        var id = $(this).attr("id");
+        order[id] = $(this).val();
+      })
+
+      //act as if sending to databse
+      alert("send to databse: " + JSON.stringify(order));
+
+      //show success message
+      $("#pageContent").append("<div class='col-md-12 text-success'>Order Received!<br/><br/>" +
+        order.catSelect + " will be delivered on " + order.startRentDate + "<img src='images/catPaws.jpeg'></div>");
     }
 
     //begin the program, get the homepage

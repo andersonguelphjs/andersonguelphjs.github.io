@@ -1,10 +1,17 @@
 /**/
 
+.nav, .carousel, .jsonCat {
+  margin-top: 3%;
+}
+.nav-pills>li>a {
+  color: #000;
+  font-size: 24px;
+}
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
   background-color: #6DB733;
 }
 .carousel {
-  background: #2f4357;
+  background: #6DB733;
   margin-top: 20px;
 }
 .carousel .item img {
@@ -21,7 +28,7 @@
   text-align: center;
   font-weight: bold;
   font-size: 24px;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6DB733, 0 0 70px #6DB733, 0 0 80px #6DB733, 0 0 100px #6DB733, 0 0 150px #6DB733;
 }
 small {
   font-weight: bold;
@@ -34,5 +41,22 @@ h1 {
 }
 .panel-heading {
   text-shadow: 0px 2px 3px #666;
+  text-align: center;
+}
+.vertical-center {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+#submitButton {
+  text-align: center;
+}
+#orderForm div {
+  margin-top: 12px;
+}
+.text-success {
   text-align: center;
 }
