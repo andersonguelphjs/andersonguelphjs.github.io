@@ -117,7 +117,7 @@ $(document).ready(function() {
 
       //show success message
       $("#pageContent").append("<div class='col-md-12 text-success'>Order Received!<br/><br/>" +
-        order.catSelect + " will be delivered on " + order.startRentDate + "<img src='images/catPaws.jpeg'></div>");
+        order.catSelect + " will be delivered on " + order.startRentDate + "<img id='paws' src='images/catPaws.jpeg'></div>");
     }
 
     //begin the program, get the homepage
