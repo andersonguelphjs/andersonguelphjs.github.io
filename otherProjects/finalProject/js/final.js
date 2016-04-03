@@ -72,7 +72,7 @@ $(document).ready(function() {
             //user clicks submit
             $("#submitButton").on("click", function() {
 
-              //add the error class to empty inputs
+              //add the error class to div of empty inputs
               $("input, select").filter(function() {
                 return !this.value;
               }).closest("div").addClass("has-error")
@@ -88,7 +88,6 @@ $(document).ready(function() {
               //if no errors
               if (hasError.length < 1) {
                 sendConfirmation();
-                console.log("error free");
               }
 
             })
@@ -101,6 +100,7 @@ $(document).ready(function() {
     //do when order valid
     function sendConfirmation() {
 
+      //we will store all our order information here
       var order = {};
 
       //get all input valuesnto object
@@ -118,7 +118,7 @@ $(document).ready(function() {
       //show success message
       $("#successMsg").html("Order Received!<br/><br/>" +
         order.catSelect + " will be delivered on " + order.startRentDate + "<img id='paws' src='images/catPaws.jpeg'>");
-    }
+    }//end sendConfirmation
 
     //begin the program, get the homepage
     getPartial("homePage");
