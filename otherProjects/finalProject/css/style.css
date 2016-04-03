@@ -31,6 +31,8 @@ body {
   font-weight: bold;
   font-size: 24px;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #6DB733, 0 0 70px #6DB733, 0 0 80px #6DB733, 0 0 100px #6DB733, 0 0 150px #6DB733;
+  letter-spacing: 50px;
+  width:50px;
 }
 small {
   font-weight: bold;
@@ -73,4 +75,7 @@ h1 {
 }
 #paws {
   margin-left:15px;
+}
+div#orderForm{
+  margin-top: 5%;
 }

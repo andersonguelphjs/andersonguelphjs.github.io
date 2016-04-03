@@ -14,7 +14,7 @@ $(document).ready(function() {
 
       }) //click
 
-//get the parital via JSON, add to page, activiate associating js
+    //get the parital via JSON, add to page, activiate associating js
     function getPartial(partial) {
 
       if (partial == "homePage") { //ajax get home.html
@@ -60,6 +60,7 @@ $(document).ready(function() {
               }) //each cat
 
             $("#pageContent").html(html);
+
           }) //getJSON
       } else if (partial == "orderPage") { //ajax get order.html
         $.get("partials/order2.html", function(data) {
@@ -95,8 +96,8 @@ $(document).ready(function() {
           }) //get
       }
       $("#pageContent").fadeIn();
-    }
 
+    }
     //do when order valid
     function sendConfirmation() {
 
