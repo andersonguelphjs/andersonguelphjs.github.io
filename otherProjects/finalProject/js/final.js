@@ -29,7 +29,7 @@ $(document).ready(function() {
             var html = "";
 
             $.each(data, function(index, item) {
-                html += '<div class="col-md-4 jsonCat">' +
+                html += '<div class="col-xs-12 col-md-4 jsonCat">' +
                   '<div class="catName">' + item.name + '</div>' +
                   '<div class="catType"><small>type </small>' + item.type + '</div>' +
                   '<div class="catGender"><small>gender </small>' + item.gender + '</div>' +
