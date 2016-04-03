@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     //get all the nav li, add click event
     $(".nav").find("li").on("click", function() {
-
+        $("#pageContent").hide().html("");
         //remove all active class
         $(".nav").find("li").removeClass("active");
         //add active class to clicked li
@@ -16,7 +16,6 @@ $(document).ready(function() {
 
 //get the parital via JSON, add to page, activiate associating js
     function getPartial(partial) {
-      $("#pageContent").hide();
 
       if (partial == "homePage") { //ajax get home.html
         $.get("partials/home.html", function(data) {
