@@ -103,7 +103,7 @@ $(document).ready(function() {
       //we will store all our order information here
       var order = {};
 
-      //get all input valuesnto object
+      //get all input values
       var inputs = $("input, select");
 
       //put all the input values into object ; this each can be done with jquery objects
