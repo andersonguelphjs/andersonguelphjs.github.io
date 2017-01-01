@@ -3,30 +3,73 @@
 
 <head>
     <title>Presentations Week 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <style media="screen">
         body {
-            background-color: rgb(121, 134, 200);
+            background-image: url("128-215.jpg");
+            background-repeat: repeat;
+            font-family: 'Lora', serif;
         }
 
-        #hello {
-            top: 20%;
-            font-size: 40px;
-            color: #FF7;
+        .container {
+            background-color: #FFF;
         }
 
-        .myContainer {
-            text-align: center;
+        #students {
+            display: block;
+            height: 440px;
+            overflow-y: scroll;
+        }
+
+        .table>tbody>tr>td {
+            vertical-align: middle;
+        }
+
+        h1 {
+            margin: 20px;
+        }
+
+        .vertical-center {
+            min-height: 85%;
+            /* Fallback for browsers do NOT support vh unit */
+            min-height: 85vh;
+            /* These two lines are counted as one :-)       */
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="myContainer">
-        <p id="hello">
-            Presentations Week 1
-        </p>
-    </div>
+    <div class="vertical-center">
 
+
+        <div class="container">
+            <div class="row">
+                <h1>Presentations</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <table id="students" class="table table-hover table-striped table-condensed">
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-8">
+                    <table id="weeks" class="table table-hover table-striped">
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="presentationChooser.js"></script>
 
 </html>
