@@ -1,0 +1,27 @@
+@media screen {
+    body {
+        background-image: url("images/128-215.jpg");
+        background-repeat: repeat;
+        font-family: 'Lora', serif;
+    }
+    .container {
+        background-color: #FFF;
+    }
+    #students {
+        display: block;
+        height: 440px;
+        overflow-y: scroll;
+    }
+    .table>tbody>tr>td {
+        vertical-align: middle;
+    }
+    h1 {
+        margin: 20px;
+    }
+    .vertical-center {
+        min-height: 85%;
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+    }
+}
