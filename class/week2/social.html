@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 2</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style media="screen">
+        .header,
+        .footer {
+            height: 150px;
+            min-height: 140px;
+            max-height: 140px;
+        }
+
+        .mainThreeColumns {
+            height: 600px;
+            min-height: 600px;
+            max-height: 600px;
+        }
+
+        .mainOneRow,
+        .mainThreeRow {
+            height: 200px;
+            min-height: 200px;
+            max-height: 200px;
+        }
+
+        #mainMiddle {
+            height: 220px;
+            min-height: 220px;
+            max-height: 220px;
+        }
+
+        .middleBottomRow {
+            height: 95px;
+            min-height: 95px;
+            max-height: 95px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!--try container-fluid-->
+        <div class="row">
+            <div class="randomColor col-md-12 header">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 mainThreeColumns randomColor">
+                <div class="row">
+                    <div class="col-md-12 mainOneRow randomColor">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mainOneRow randomColor">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mainOneRow randomColor">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 mainThreeColumns randomColor">
+                <div class="row">
+
+
+                    <div class="col-md-12 randomColor" id="mainMiddle">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 middleBottomRow randomColor">
+
+                    </div>
+                    <div class="col-md-9 middleBottomRow randomColor ">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 middleBottomRow randomColor">
+
+                    </div>
+                    <div class="col-md-9 middleBottomRow randomColor">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 middleBottomRow randomColor">
+
+                    </div>
+                    <div class="col-md-9 middleBottomRow randomColor">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 middleBottomRow randomColor">
+
+                    </div>
+                    <div class="col-md-9 middleBottomRow randomColor">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 mainThreeColumns randomColor">
+                <div class="row">
+                    <div class="col-md-12 mainThreeRow randomColor">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mainThreeRow randomColor">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mainThreeRow randomColor">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="randomColor col-md-12 footer">
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * max + min);
+        }
+
+        $(document).ready(function() {
+
+            var bodyColumns = $(".randomColor");
+
+            bodyColumns.each(function() {
+
+                $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+            })
+
+            $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+
+        })
+    </script>
+</body>
+
+</html>
