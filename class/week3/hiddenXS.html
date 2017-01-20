@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 3</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style media="screen">
+      .height1{
+        height:100px;
+        max-height: 100px;
+        min-height: 100px;
+      }
+      .height2{
+        height:600px;
+        max-height: 600px;
+        min-height: 600px;
+      }
+      .height3{
+        height:300px;
+        max-height: 300px;
+        min-height: 300px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 height1 hidden-xs">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 height2 hidden-xs">
+
+        </div>
+        <div class="col-md-6 height2">
+          <div class="row">
+            <div class="col-md-6 col-xs-6 height3">
+
+            </div>
+            <div class="col-md-6 col-xs-6 height3">
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-xs-6 height3">
+
+            </div>
+            <div class="col-md-6 col-xs-6 height3">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 height2 hidden-xs">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 height1 hidden-xs">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * max + min);
+        }
+
+        $(document).ready(function() {
+
+            var bodyColumns = $("[class*='col']");
+
+            bodyColumns.each(function() {
+
+                $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+            })
+
+        })
+    </script>
+  </body>
+</html>
