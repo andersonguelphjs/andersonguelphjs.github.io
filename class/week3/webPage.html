@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<!--
+-targeted css by height
+-put in col- in div text
+-can throw in some lorem ipum a
+-a top margin-->
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Week 3</title>
+    <title>Web Page</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style media="screen">
+        .header,
+        .footer {
+            height: 100px;
+            max-height: 100px;
+            min-height: 100px;
+        }
 
-  </head>
-  <body>
-<div id="main" class="container">
-  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-<div class="row">
-  <div class="col-xs-12 col-md-8 randomColor">.col-xs-12 .col-md-8</div>
-  <div class="col-xs-6 col-md-4 randomColor">.col-xs-6 .col-md-4</div>
-</div>
+        .header {
+            margin-top: 15px;
+        }
 
-<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-<div class="row">
-  <div class="col-xs-6 col-md-4 randomColor">.col-xs-6 .col-md-4</div>
-  <div class="col-xs-6 col-md-4 randomColor">.col-xs-6 .col-md-4</div>
-  <div class="col-xs-6 col-md-4 randomColor">.col-xs-6 .col-md-4</div>
-</div>
+        .middleColumn {
+            height: 600px;
+            max-height: 600px;
+            min-height: 600px;
+        }
+        body{
+          font-size: 36px;
+          font-weight: bold;
+        }
+    </style>
 
-<!-- Columns are always 50% wide, on mobile and desktop -->
-<div class="row">
-  <div class="col-xs-6 randomColor">.col-xs-6</div>
-  <div class="col-xs-6 randomColor">.col-xs-6</div>
-</div>
-</div>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 header randomColor">
+                col-md-12
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 middleColumn randomColor">
+                col-md-2
+            </div>
+            <div class="col-md-8 middleColumn randomColor">
+                col-md-8
+            </div>
+            <div class="col-md-2 middleColumn randomColor">
+                col-md-2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 footer randomColor">
+                col-md-12
+            </div>
+        </div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -57,5 +88,6 @@
 
         })
     </script>
-  </body>
+</body>
+
 </html>

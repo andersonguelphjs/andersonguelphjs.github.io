@@ -1,14 +1,18 @@
+[class*='col-md-'] {
+    height: 600px;
+    min-height: 600px;
+    max-height: 600px;
+}
+
 .header, .footer {
     height: 75px;
     min-height: 75px;
     max-height: 75px;
 }
-
-#main [class*='col-md-'] {
-    height: 300px;
-    min-height: 300px;
-    max-height: 300px;
+.header{
+  margin-top: 3%;
 }
-.col-md-3{
-
+body{
+  font-size: 36px;
+  font-weight: bold;
 }
