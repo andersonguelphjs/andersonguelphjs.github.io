@@ -1,143 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Use more targeted css
-nested columns-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Week 2</title>
+    <title>Social Nested</title>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <style media="screen">
-        .header,
-        .footer {
-            height: 120px;
-            min-height: 120px;
-            max-height: 120px;
+        .header {
+            height: 50px;
+            min-height: 50px;
+            max-height: 50px;
         }
 
-        .mainThreeColumns {
+        .mainThree {
             height: 600px;
             min-height: 600px;
             max-height: 600px;
         }
 
-        .mainOneRow,
-        .mainThreeRow {
+        .footer {
+            height: 60px;
+            min-height: 60px;
+            max-height: 60px;
+        }
+
+        .mainThreeLeft,
+        .mainThreeRight {
             height: 200px;
             min-height: 200px;
             max-height: 200px;
         }
 
-        #mainMiddle {
-            height: 220px;
-            min-height: 220px;
-            max-height: 220px;
+        .mainThreeMiddleTop {
+            height: 200px;
+            min-height: 200px;
+            max-height: 200px;
         }
 
-        .middleBottomRow {
-            height: 95px;
-            min-height: 95px;
-            max-height: 95px;
+        .mainThreeMiddleBottom {
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
         }
     </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
     <div class="container">
-        <!--try container-fluid-->
         <div class="row">
-            <div class="randomColor col-md-12 header">
+            <div class="col-md-12 randomColor header">
 
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 mainThreeColumns randomColor">
+            <div class="col-md-3 randomColor mainThree">
                 <div class="row">
-                    <div class="col-md-12 mainOneRow randomColor">
+                    <div class="col-md-12 randomColor mainThreeLeft">
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 mainOneRow randomColor">
+                    <div class="col-md-12 randomColor mainThreeLeft">
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 mainOneRow randomColor">
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-7 mainThreeColumns randomColor">
-                <div class="row">
-
-
-                    <div class="col-md-12 randomColor" id="mainMiddle">
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 middleBottomRow randomColor">
-
-                    </div>
-                    <div class="col-md-9 middleBottomRow randomColor ">
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 middleBottomRow randomColor">
-
-                    </div>
-                    <div class="col-md-9 middleBottomRow randomColor">
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 middleBottomRow randomColor">
-
-                    </div>
-                    <div class="col-md-9 middleBottomRow randomColor">
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 middleBottomRow randomColor">
-
-                    </div>
-                    <div class="col-md-9 middleBottomRow randomColor">
+                    <div class="col-md-12 randomColor mainThreeLeft">
 
                     </div>
                 </div>
             </div>
-            <div class="col-md-2 mainThreeColumns randomColor">
+
+
+            <div class="col-md-7 randomColor mainThree">
                 <div class="row">
-                    <div class="col-md-12 mainThreeRow randomColor">
+                    <div class="col-md-12 randomColor mainThreeMiddleTop">
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 mainThreeRow randomColor">
+                  <div class="col-md-3 randomColor mainThreeMiddleBottom">
+
+                  </div>
+                  <div class="col-md-9 randomColor mainThreeMiddleBottom">
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 randomColor mainThreeMiddleBottom">
+
+                  </div>
+                  <div class="col-md-9 randomColor mainThreeMiddleBottom">
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 randomColor mainThreeMiddleBottom">
+
+                  </div>
+                  <div class="col-md-9 randomColor mainThreeMiddleBottom">
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 randomColor mainThreeMiddleBottom">
+
+                  </div>
+                  <div class="col-md-9 randomColor mainThreeMiddleBottom">
+
+                  </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-2 randomColor mainThree">
+                <div class="row">
+                    <div class="col-md-12 randomColor mainThreeRight">
 
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 mainThreeRow randomColor">
+                    <div class="col-md-12 randomColor mainThreeRight">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 randomColor mainThreeRight">
 
                     </div>
                 </div>
             </div>
+
+
         </div>
         <div class="row">
-            <div class="randomColor col-md-12 footer">
+            <div class="col-md-12 randomColor footer">
 
             </div>
         </div>
     </div>
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

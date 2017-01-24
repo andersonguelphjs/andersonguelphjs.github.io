@@ -1,93 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
--targeted css by height
--put in col- in div text
--can throw in some lorem ipum a
--a top margin-->
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Web Page</title>
+    <title>Holy Grail</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <style media="screen">
-        .header,
-        .footer {
-            height: 100px;
-            max-height: 100px;
-            min-height: 100px;
-        }
+<style media="screen">
+  .header, .footer{
+    height: 100px;
+    max-height: 100px;
+    min-height: 100px;
+  }
+  .middleHeight{
+    height: 550px;
+    max-height: 550px;
+    min-height: 550px;
 
-        .header {
-            margin-top: 15px;
-        }
+  }
+  body{
+    font-size: 48px;
+    font-weight: bold;
+  }
+</style>
 
-        .middleColumn {
-            height: 600px;
-            max-height: 600px;
-            min-height: 600px;
-        }
-        body{
-          font-size: 36px;
-          font-weight: bold;
-        }
-    </style>
-
-</head>
-
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 header randomColor">
-                col-md-12
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2 middleColumn randomColor">
-                col-md-2
-            </div>
-            <div class="col-md-8 middleColumn randomColor">
-                col-md-8
-            </div>
-            <div class="col-md-2 middleColumn randomColor">
-                col-md-2
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 footer randomColor">
-                col-md-12
-            </div>
-        </div>
+  </head>
+  <body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 randomColor header">
+col-md-12
     </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2 randomColor middleHeight">
+col-md-2
+    </div>
+    <div class="col-md-8 randomColor middleHeight">
+col-md-8
+    </div>
+    <div class="col-md-2 randomColor middleHeight">
+col-md-2
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 randomColor footer">
+col-md-12
+    </div>
+  </div>
+</div>
+
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-        function getRandomNumber(min, max) {
-            return Math.floor(Math.random() * max + min);
-        }
+            function getRandomNumber(min, max) {
+                return Math.floor(Math.random() * max + min);
+            }
 
-        $(document).ready(function() {
+            $(document).ready(function() {
 
-            var bodyColumns = $(".randomColor");
+                var bodyColumns = $(".randomColor");
 
-            bodyColumns.each(function() {
+                bodyColumns.each(function() {
 
-                $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+                    $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+                })
+
+                $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
 
             })
+        </script>
 
-            $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
-
-
-        })
-    </script>
-</body>
-
+  </body>
 </html>

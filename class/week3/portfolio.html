@@ -5,12 +5,36 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blog</title>
+    <title>Portfolio</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style media="screen">
+        .header,
+        .footer {
+            height: 100px;
+            max-height: 100px;
+            min-height: 100px;
+        }
+
+        .mainBody {
+            height: 300px;
+            max-height: 300px;
+            min-height: 300px;
+        }
+
+        .lowerThird {
+            height: 110px;
+            max-height: 110px;
+            min-height: 110px;
+        }
+
+        body {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,16 +44,45 @@
 </head>
 
 <body>
-    <div id="main" class="container">
+    <div class="container">
         <div class="row">
-            <div class="col-md-3 randomColor">
-                col-md-3
-            </div>
-            <div class="col-md-9 randomColor">
-                col-md-9
+            <div class="col-md-12 randomColor header">
+                col-md-12
             </div>
         </div>
-
+        <div class="row">
+            <div class="col-md-12 randomColor mainBody">
+                col-md-12
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 randomColor lowerThird">
+                col-md-3
+            </div>
+            <div class="col-md-3 randomColor lowerThird">
+                col-md-3
+            </div>
+            <div class="col-md-3 randomColor lowerThird">
+                col-md-3
+            </div>
+            <div class="col-md-3 randomColor lowerThird">
+                col-md-3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 randomColor lowerThird">
+                col-md-3
+            </div>
+            <div class="col-md-3 randomColor lowerThird">
+                col-md-3
+            </div>
+            <div class="col-md-3 randomColor lowerThird">
+                col-md-3
+            </div>
+            <div class="col-md-3 randomColor lowerThird">
+                col-md-3
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12 randomColor footer">
                 col-md-12
@@ -60,6 +113,7 @@
 
         })
     </script>
+
 </body>
 
 </html>
