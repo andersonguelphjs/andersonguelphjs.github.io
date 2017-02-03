@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+hidden-xs
+images = height , width - 30px
+-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Week 3</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style media="screen">
+    .height1 {
+      height: 100px;
+      max-height: 100px;
+      min-height: 100px;
+    }
+
+    .height2 {
+      height: 600px;
+      max-height: 600px;
+      min-height: 600px;
+    }
+
+    .height3 {
+      height: 300px;
+      max-height: 300px;
+      min-height: 300px;
+    }
+
+    .height4 {
+      height: 250px;
+      max-height: 250px;
+      min-height: 250px;
+    }
+
+    .height5 {
+      height: 25px;
+      max-height: 25px;
+      min-height: 25px;
+    }
+    img{
+      height:250px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 hidden-xs randomColor">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 height2 hidden-xs randomColor">
+
+      </div>
+      <div class="col-md-8 height2 randomColor">
+        <div class="row">
+          <div class="col-md-6 col-xs-12 height3 randomColor">
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height4 randomColor">
+                <img src="images/image1.jpg" alt="image1">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height5 randomColor">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height5 randomColor">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12 height3 randomColor">
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height4 randomColor">
+                <img src="images/image2.jpg" alt="image2">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height5 randomColor">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height5 randomColor">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-12 height3 randomColor">
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height4 randomColor">
+                <img src="images/image3.jpg" alt="image3">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height5 randomColor">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height5 randomColor">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12 height3 randomColor">
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height4 randomColor">
+                <img src="images/image4.png" alt="image4">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height5 randomColor">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-xs-12 height5 randomColor">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 height2 hidden-xs randomColor">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height1 hidden-xs randomColor">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+    function getRandomNumber(min, max) {
+      return Math.floor(Math.random() * max + min);
+    }
+
+    $(document).ready(function() {
+
+      var bodyColumns = $(".randomColor");
+
+      bodyColumns.each(function() {
+
+        $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+      })
+
+    })
+  </script>
+</body>
+
+</html>
