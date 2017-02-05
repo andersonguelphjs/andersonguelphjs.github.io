@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Offset</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style media="screen">
+
+        .container-fluid {
+            padding-top: 5%;
+        }
+
+        .positioning,
+        .flexContainer,
+        .bruteControl {
+            height: 100px;
+            min-height: 300px;
+            max-height: 300px;
+        }
+
+        .positioning {
+            position: relative;
+        }
+
+        .positioning img {
+            position: absolute;
+            /*within the container*/
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .positioningText {
+            position: absolute;
+            top: 70%;
+            left: 12%;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .flexContainer {
+            display: flex;
+            /*stretch content to fill container, regardless of size*/
+            flex-wrap: wrap;
+            /*multiple lines possible*/
+            justify-content: center;
+            /*horizontal*/
+            align-content: center;
+            /*vertical*/
+
+
+
+
+        }
+.flexContainer *{
+  flex: 0 1 auto;
+}
+        .flexText {
+            margin-top: 5%;
+            font-weight: bold;
+            text-align: center;
+            max-height: 25px;
+        }
+
+        .bruteText {
+            padding-top: 5%;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .bruteControl img {
+            padding-top: 25%;
+            padding-left: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5 randomColor positioning">
+                <img src="images/luckyTama.png">
+                <div class="positioningText">
+                    Center content using 'position'
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-2 randomColor flexContainer">
+
+                <img src="images/luckyTama.png">
+                <div class="flexText">Center content using 'flex'</div>
+
+            </div>
+
+            <div class="col-md-2 col-md-offset-4 randomColor bruteControl">
+                <img src="images/luckyTama.png">
+                <div class="bruteText">
+                    Center content using brute control
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * max + min);
+        }
+
+        $(document).ready(function() {
+
+            var bodyColumns = $(".randomColor");
+
+            bodyColumns.each(function() {
+
+                $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+            })
+
+            $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+
+        })
+    </script>
+</body>
+
+</html>
