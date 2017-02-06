@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Center</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <style media="screen">
+        .container-fluid {
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .randomColor {
+            height: 100px;
+            min-height: 300px;
+            max-height: 300px;
+            border:1px solid black;
+        }
+
+        .textAlignCenter {
+            text-align: center;
+        }
+
+        .marginAuto {
+            margin:0 auto;
+            width: 50%;
+        }
+
+        img.displayed {
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .verticalAlignRelativeContainer {
+            position: relative;
+        }
+
+        .verticalAlignAbsoluteChild {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .flexVerticalCenterContainer {
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .flexVerticalCenterChild {}
+
+        .horAndVertRelativeContainer {
+            position: relative;
+        }
+
+        .horAndVertAbsoluteChild {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .horAndVertFlexContainerElementsHorizontal {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .horAndVertFlexContainerElementsVertical {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="textAlignCenter">The Holy Grail of Centering</h1>
+        </div>
+
+      </div>
+        <div class="row">
+            <div class="col-md-4 randomColor">
+                <div class="centerBlock">
+                </div>
+                <div class="textAlignCenter">
+                  Horizontal; text-align:center centers text within the element like MSWord. This div by default case spans the whole width of the col;
+                </div>
+            </div>
+            <div class="col-md-4 randomColor">
+                <div class="marginAuto">Horizontal using margin:0 auto. Works on block level item of smaller width than container. This div is 50% width</div>
+            </div>
+
+            <div class="col-md-4 randomColor">
+                <div class="textAlignCenter marginAuto">
+                    Horizontal using margin: 0 auto and text-align:center.
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 randomColor">
+                <img src="images/luckyTama.png" class="displayed">
+                <div class="Text">
+                    Horizontal.  margin:0 auto will only work on an on inline element like img if we make it display:block
+                </div>
+            </div>
+            <div class="col-md-4 randomColor verticalAlignRelativeContainer">
+                <img src="images/luckyTama.png" class="verticalAlignAbsoluteChild">
+                <div class="Text">Vertical using position</div>
+            </div>
+
+            <div class="col-md-4 randomColor flexVerticalCenterContainer">
+                <img src="images/luckyTama.png">
+                <div class="Text">
+                    Vertical using flex
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 randomColor horAndVertRelativeContainer">
+                <img src="images/luckyTama.png" class="horAndVertAbsoluteChild">
+                <div class="Text">
+                    Horizonally and Vertical using position
+                </div>
+            </div>
+            <div class="col-md-4 randomColor horAndVertRelativeContainer">
+                <div class="horAndVertAbsoluteChild">
+                    <img src="images/luckyTama.png" class="displayed">
+                    <div class="textAlignCenter">
+                        Horizonally and Vertical with multiple elements using positioned container and more css on inner elements.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 randomColor horAndVertFlexContainerElementsHorizontal">
+                <img src="images/luckyTama.png">
+                <div class="textAlignCenter">
+                    Hor and Vert using flex
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 randomColor horAndVertFlexContainerElementsVertical">
+                <img src="images/luckyTama.png">
+                <div class="textAlignCenter">
+                    Horizonally and Vertically multiple elements using flex; elements vertical
+                </div>
+            </div>
+            <div class="col-md-4 randomColor">
+                    <img src="images/luckyTama.png">
+                    <div class="textAlignCenter">
+                        Nothing
+                    </div>
+            </div>
+            <div class="col-md-4 randomColor">
+                <img src="images/luckyTama.png">
+                <div>
+                    Nothing
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (255 - 200) + 200);
+        }
+
+        $(document).ready(function() {
+
+            var bodyColumns = $(".randomColor");
+
+            bodyColumns.each(function() {
+
+                $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+            })
+
+            $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+
+        })
+    </script>
+</body>
+
+</html>

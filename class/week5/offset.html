@@ -19,7 +19,8 @@
 
         .positioning,
         .flexContainer,
-        .bruteControl {
+        .bruteControl,
+        .cssTable {
             height: 100px;
             min-height: 300px;
             max-height: 300px;
@@ -54,10 +55,15 @@
             /*horizontal*/
             align-content: center;
             /*vertical*/
-
-
-
-
+        }
+        .cssTable{
+          display: table;
+          width: 16%;
+        }
+        .cssTable img, .cssTableText{
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
         }
 .flexContainer *{
   flex: 0 1 auto;
@@ -104,6 +110,14 @@
                 <img src="images/luckyTama.png">
                 <div class="bruteText">
                     Center content using brute control
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5 randomColor cssTable">
+                <img src="images/luckyTama.png">
+                <div class="cssTableText">
+                    Center content using 'position'
                 </div>
             </div>
         </div>
