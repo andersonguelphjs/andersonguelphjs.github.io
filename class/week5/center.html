@@ -11,52 +11,85 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <style media="screen">
+
         .container-fluid {
             font-family: 'Oswald', sans-serif;
             font-weight: bold;
             font-size: 24px;
         }
+
+        .centerType {
+            padding: 0 5px;
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
         .randomColor {
             height: 100px;
             min-height: 300px;
             max-height: 300px;
-            border:1px solid black;
+            border: 1px solid black;
+        }
+        /*------------*/
+        .paddingMargin img {
+            margin-top: 8%;
+            margin-left: 30%;
         }
 
+        .paddingMargin div {
+            margin-top: 5%;
+            margin-left: 39%;
+        }
+
+        /*------------*/
+        /*------------*/
         .textAlignCenter {
             text-align: center;
         }
-
+        /*------------*/
+        /*------------*/
         .marginAuto {
-            margin:0 auto;
+            margin: 0 auto;
             width: 50%;
         }
-
+        /*------------*/
+        /*------------*/
         img.displayed {
             display: block;
             margin-left: auto;
             margin-right: auto
         }
+        /*------------*/
+        /*------------*/
+        .paddingMarginPlus img {
+            padding-top: 10%;
+            padding-bottom: 3%;
+            display: block;
+            margin: 0 auto;
+        }
 
-        .verticalAlignRelativeContainer {
+        .paddingMarginPlus div {
+            padding: 3%;
+        }
+        /*------------*/
+        /*------------*/
+        .horAndVertRelativeContainer {
             position: relative;
         }
 
-        .verticalAlignAbsoluteChild {
+        .horAndVertRelativeContainer img {
             position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
-        .flexVerticalCenterContainer {
-            height: 100px;
-            display: flex;
-            align-items: center;
+        .horAndVertRelativeContainer div {
+            position: absolute;
+            top: 80%;
         }
-
-        .flexVerticalCenterChild {}
-
-        .horAndVertRelativeContainer {
+        /*------------*/
+        /*------------*/
+        .horAndVertRelativeWithChild {
             position: relative;
         }
 
@@ -66,14 +99,8 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
-        .horAndVertFlexContainerElementsHorizontal {
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
+        /*------------*/
+        /*------------*/
         .horAndVertFlexContainerElementsVertical {
             height: 100px;
             display: flex;
@@ -81,67 +108,80 @@
             justify-content: center;
             flex-flow: column;
         }
+        /*------------*/
+        /*------------*/
+        .horAndVertFlexContainerElementsHorizontal {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="textAlignCenter">The Holy Grail of Centering</h1>
-        </div>
-
-      </div>
         <div class="row">
-            <div class="col-md-4 randomColor">
-                <div class="centerBlock">
+            <div class="col-md-12">
+                <h1 class="textAlignCenter">The Holy Grail of Centering</h1>
+            </div>
+        </div>
+        <!--    First Row         -->
+        <div class="row">
+            <div class="col-md-4 randomColor paddingMargin">
+                <span class="centerType">Padding / Margin</span>
+                <br>
+                <img src="images/luckyTama.png">
+                <div>
+                    Top/Left Padding and Margin
                 </div>
+            </div>
+            <div class="col-md-4 randomColor">
                 <div class="textAlignCenter">
-                  Horizontal; text-align:center centers text within the element like MSWord. This div by default case spans the whole width of the col;
+                    Horizontal; text-align:center centers text within the element like MSWord. This div by default case spans the whole width of the col;
                 </div>
             </div>
             <div class="col-md-4 randomColor">
                 <div class="marginAuto">Horizontal using margin:0 auto. Works on block level item of smaller width than container. This div is 50% width</div>
             </div>
-
-            <div class="col-md-4 randomColor">
-                <div class="textAlignCenter marginAuto">
-                    Horizontal using margin: 0 auto and text-align:center.
-                </div>
-            </div>
         </div>
+          <!--   Second Row          -->
         <div class="row">
             <div class="col-md-4 randomColor">
                 <img src="images/luckyTama.png" class="displayed">
                 <div class="Text">
-                    Horizontal.  margin:0 auto will only work on an on inline element like img if we make it display:block
+                    Horizontal. margin:0 auto will only work on an on inline element like img if we make it display:block
                 </div>
             </div>
-            <div class="col-md-4 randomColor verticalAlignRelativeContainer">
-                <img src="images/luckyTama.png" class="verticalAlignAbsoluteChild">
-                <div class="Text">Vertical using position</div>
-            </div>
-
-            <div class="col-md-4 randomColor flexVerticalCenterContainer">
+            <div class="col-md-4 randomColor paddingMarginPlus">
                 <img src="images/luckyTama.png">
-                <div class="Text">
-                    Vertical using flex
+                <div class="textAlignCenter">
+                    Top/Left Padding Margin Plus
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="col-md-4 randomColor horAndVertRelativeContainer">
-                <img src="images/luckyTama.png" class="horAndVertAbsoluteChild">
-                <div class="Text">
+                <span class="centerType">Position</span>
+                <img src="images/luckyTama.png">
+                <div>
                     Horizonally and Vertical using position
                 </div>
             </div>
-            <div class="col-md-4 randomColor horAndVertRelativeContainer">
+        </div>
+          <!--   Third Row        -->
+        <div class="row">
+            <div class="col-md-4 randomColor horAndVertRelativeWithChild">
                 <div class="horAndVertAbsoluteChild">
                     <img src="images/luckyTama.png" class="displayed">
                     <div class="textAlignCenter">
                         Horizonally and Vertical with multiple elements using positioned container and more css on inner elements.
                     </div>
+                </div>
+            </div>
+            <div class="col-md-4 randomColor horAndVertFlexContainerElementsVertical">
+                <span class="centerType">Flex</span>
+                <img src="images/luckyTama.png">
+                <div class="textAlignCenter">
+                    Horizonally and Vertically multiple elements using flex; elements vertical
                 </div>
             </div>
             <div class="col-md-4 randomColor horAndVertFlexContainerElementsHorizontal">
@@ -151,27 +191,8 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 randomColor horAndVertFlexContainerElementsVertical">
-                <img src="images/luckyTama.png">
-                <div class="textAlignCenter">
-                    Horizonally and Vertically multiple elements using flex; elements vertical
-                </div>
-            </div>
-            <div class="col-md-4 randomColor">
-                    <img src="images/luckyTama.png">
-                    <div class="textAlignCenter">
-                        Nothing
-                    </div>
-            </div>
-            <div class="col-md-4 randomColor">
-                <img src="images/luckyTama.png">
-                <div>
-                    Nothing
-                </div>
-            </div>
-        </div>
     </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
