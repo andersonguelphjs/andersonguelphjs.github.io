@@ -10,7 +10,12 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <style media="screen">
+    body{
+      font-family: 'Lora', serif;
+      font-size: 16px;
+    }
         .topRow {
             height: 75px;
             min-height: 75px;
@@ -18,9 +23,9 @@
         }
 
         .middleRow {
-            height: 400px;
-            min-height: 400px;
-            max-height: :400px
+            height: 350px;
+            min-height: 350px;
+            max-height: :350px
         }
 
         .bottomRow {
@@ -45,6 +50,26 @@
           align-items: center;
           justify-content: center;
         }
+        .vertFlex{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+        .myTitle{
+          line-height: 75px;
+          font-size: 26px;
+          font-weight: bold;
+        }
+        .textAlignCenter{
+          text-align: center;
+        }
+        .links{
+          text-transform: uppercase;
+          line-height: 75px;
+          font-weight: bold;
+        }
+
     </style>
 
 </head>
@@ -52,22 +77,40 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-3 randomColor topRow">
+            <div class="col-md-3 topRow">
+<div class="textAlignCenter myTitle">
+  Flowers
+</div>
+            </div>
+            <div class="col-md-7 topRow">
 
             </div>
-            <div class="col-md-7 randomColor topRow">
-
+            <div class="col-md-1 topRow">
+              <div class="links">See</div>
             </div>
-            <div class="col-md-1 randomColor topRow">
-
-            </div>
-            <div class="col-md-1 randomColor topRow">
-
+            <div class="col-md-1 topRow">
+<div class="links">about</div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 randomColor middleRow">
-
+            <div class="col-md-12 horzFlex middleRow">
+                <img src="images/flower5.jpg" alt="flower5">
+                <div class="buy">
+                  BUY
+                </div>
+                <img src="images/flower5.jpg" alt="flower5">
+                <div class="buy">
+                  BUY
+                </div>
+                <img src="images/flower5.jpg" alt="flower5">
+                <div class="buy">
+                  BUY
+                </div>
+                <img src="images/flower5.jpg" alt="flower5">
+                <div class="buy">
+                  BUY
+                </div>
+                <img src="images/flower5.jpg" alt="flower5">
             </div>
         </div>
         <div class="row">
@@ -79,9 +122,11 @@
             </div>
             <div class="col-md-3 horzFlex bottomRow">
                 <img src="images/flower3.jpeg" alt="flower3">
+                <div>Flex H</div>
             </div>
-            <div class="col-md-3 randomColor bottomRow">
-
+            <div class="col-md-3 vertFlex bottomRow">
+                <img src="images/flower4.jpg" alt="flower4">
+                <div>Flex V</div>
             </div>
         </div>
     </div>
