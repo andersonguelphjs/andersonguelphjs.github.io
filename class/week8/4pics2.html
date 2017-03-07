@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Week 8</title>
+    <title>4 pics</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -13,29 +13,25 @@
     <style media="screen">
         .height1 {
             height: 50px;
-            max-height: 50px;
             min-height: 50px;
+            max-height: 50px;
         }
 
         .height2 {
             height: 600px;
-            max-height: 600px;
             min-height: 600px;
+            max-height: 600px;
         }
 
         .height3 {
             height: 300px;
-            max-height: 300px;
             min-height: 300px;
+            max-height: 300px;
         }
-        .height4 {
-            height: 50px;
-            max-height: 50px;
-            min-height: 50px;
-        }
+
         img {
             width: 100%;
-            height:100%;
+            height: 100%;
         }
     </style>
 
@@ -44,7 +40,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 height1 hidden-xs">
+            <div class="col-md-12 hidden-xs height1">
 
             </div>
         </div>
@@ -52,24 +48,22 @@
             <div class="col-md-2 height2 hidden-xs">
 
             </div>
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-6 col-xs-12 height3">
-                        <img src="images/topLeft.jpg" alt="">
+            <div class="col-md-8 height2">
+
+                    <div class="col-md-6 height3">
+                        <img src="images/topLeft.jpg" alt="image">
                     </div>
-                    <div class="col-md-6 col-xs-12 height3">
-                        <img src="images/topRight.jpg" alt="">
+                    <div class="col-md-6 height3">
+                        <img src="images/topRight.jpg" alt="image">
                     </div>
 
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-xs-12 height3">
-                        <img src="images/bottomLeft.png" alt="">
+                    <div class="col-md-6 height3">
+                        <img src="images/lowerLeft.jpg" alt="image">
                     </div>
-                    <div class="col-md-6 col-xs-12 height3">
-                        <img src="images/bottomRight.jpg" alt="">
+                    <div class="col-md-6 height3">
+                        <img src="images/lowerRight.jpg" alt="image">
                     </div>
-                </div>
+
             </div>
             <div class="col-md-2 height2 hidden-xs">
 
@@ -87,14 +81,13 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
-
         function getRandomNumber(min, max) {
             return Math.floor(Math.random() * max + min);
         }
 
         $(document).ready(function() {
 
-            var bodyColumns = $("[class*='col']");
+            var bodyColumns = $(".randomColor");
 
             bodyColumns.each(function() {
 
@@ -102,8 +95,10 @@
 
             })
 
-        })
+          //  $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
 
+
+        })
     </script>
 </body>
 
