@@ -33,12 +33,14 @@
     <script>
         //Get average of numbers without loop
         $(document).ready(function() {
-
+            for (var i = 0; i <= 10; i++) {
+                console.log("i value is " + i);
+            }
             var numArr = [3, 5, 7, 3, 8, 9];
             $("#results").append("<div>Values in Array</div>");
 
-            for (var i = 0; i < numArr.length; i++) {
-                $("#results").append("<div>" + numArr[i] + "</div>");
+            for (var j = 0; j < numArr.length; j++) {
+                $("#results").append("<div>" + numArr[j] + "</div>");
             }
 
             var player = {

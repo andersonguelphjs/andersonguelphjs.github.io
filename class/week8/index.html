@@ -64,6 +64,9 @@
 
         //type, price, mileage, color, fuelType, src
         //when the page load, we go to a database and get some info about a car
+
+        //property : value
+        //key value pair
         var car = {
             type: "SUV",
             price: 45000,
@@ -104,6 +107,10 @@
                 "</div>";
 
                 $("#carDiv").html(myHtml);
+
+           //watch
+            var carDiv = $("#carDiv");
+
 
                 var myHtml2 = "<div id='centerDiv'>" +
                     "<div>" + car.type + "</div>" +
