@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 10</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style media="screen">
+
+
+
+
+
+
+
+        #footerContainer {
+            height: 200px;
+            min-height: 200px;
+            max-height: 200px;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        #navContainer div {}
+        /*nav  */
+
+        #navContainer {
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+            position: relative;
+        }
+
+        #nav {
+            background-color: #000;
+            height: 50px;
+            min-height: 50px;
+            max-height: 50px;
+            position: absolute;
+            top: 40px;
+            width: 100%;
+        }
+
+        #navLinks {
+            margin-left: 35%
+        }
+
+        #navLinks a {
+            margin-left: 100px;
+            margin-right: 100px;
+            line-height: 50px;
+            color: #FFF;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        /*sliderContainer*/
+
+        #sliderContainer img {
+            height: 100%;
+            width: 100%;
+        }
+
+/*contacts container*/
+#contactContainer {
+    height: 350px;
+    min-height: 350px;
+    max-height: 350px;
+    background-color: #FFF;
+}
+
+#contactContainer input {
+    border: 2px solid #ccc;
+    border-right: 0;
+    border-radius: 0;
+    width: 50%;
+    padding: 8px;
+    width: 300px;
+}
+
+#contactContainer button {
+    border: 2px solid #ccc;
+    border-radius: 0;
+    background-color: #6a7334;
+    color: #fff;
+    padding: 6px 25px;
+    bottom: 0;
+    font-size: 18px !important;
+}
+
+.font24 {
+    font-size: 24px;
+}
+
+.font18 {
+    font-size: 18px;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.centerText {
+    width: 100%;
+    text-align: center;
+}
+
+
+      /*cards container*/
+        #cardsContainer {
+            height: 700px;
+            min-height: 700px;
+            max-height: 700px;
+        }
+        #flexContainer {
+          height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 80px;
+            padding-right: 80px;
+            align-items: center;
+        }
+
+        #flexContainer span {
+            text-transform: uppercase;
+            width:300px;
+            overflow: hidden;
+        }
+
+/*social container*/
+
+#socialContainer {
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+}
+#socialContainer div{
+  padding-top: 100px;
+text-align: center;
+}
+#socialContainer span{
+  margin-right:30px
+}
+
+/*gallery container*/
+#galleryContainer img{
+width:100%;
+}
+#galleryContainer div{
+  padding: 5px !important;
+}
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="color-primary-0">
+
+    <div class="container-fluid">
+
+        <div class="color-primary-0" id="navContainer">
+
+            <div id="nav">
+                <div id="navLinks"><a href="#">link</a><a href="#">link</a><a href="#">link</a><a href="#">link</a></div>
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 color-secondary-1-0" id="sliderContainer">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="images/image1.jpg" alt="image">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/image2.jpg" alt="image">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/image3.jpg" alt="image">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images/image4.jpg" alt="image">
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 color-secondary-2-0" id="contactContainer">
+                <div class="centerText font24 bold" style="padding:10px;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div class="centerText font18" style="padding:5px;">
+                    Nulla convallis tortor orci, ut ultricies ligula bibendum quis.<br> Nam at vulputate metus.
+                </div>
+                <div class="centerText font18 bold" style="padding:8px;">
+                    Proin varius blandit augue, eget fringilla velit fermentum in.
+                </div>
+                <div class="centerText font14" style="padding:;3px">
+                    Integer fermentum luctus velit eu cursus. <br>Maecenas ultricies, arcu sit amet fringilla malesuada, risus nibh viverra ipsum,<br>eu venenatis metus odio nec eros.
+                </div>
+                <div class="centerText font14" style="padding:5px;">
+                    <input type="text" name="email" value="enter your email"><button type="button">Count me in !</button>
+                  </div>
+
+                        <div class="centerText font14" style="padding:20px;">
+                            Fusce convallis quam in leo finibus, nec condimentum dolor maximus.
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 color-complement-0" id="cardsContainer">
+                  <div id="flexContainer">
+                    <span><img src="images/box1.jpg" alt="box">
+                          <div class="centerText font18" style="padding:5px;">
+                            In hendrerit ante hendrerit elit vestibulum finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          </div>
+                          <div class="centerText font14" style="padding:3px;">
+                             In non nisi dictum, consectetur dolor in, ultrices neque.
+                          </div>
+                    </span>
+                    <span><img src="images/box2.jpg" alt="box">
+                      <div class="centerText font18" style="padding:5px;">
+                        In hendrerit ante hendrerit elit vestibulum finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </div>
+                      <div class="centerText font14" style="padding:3px;">
+                         In non nisi dictum, consectetur dolor in, ultrices neque.
+                      </div>
+                    </span>
+                    <span><img src="images/box3.jpg" alt="box">
+                      <div class="centerText font18" style="padding:5px;">
+                        In hendrerit ante hendrerit elit vestibulum finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      </div>
+                      <div class="centerText font14" style="padding:3px;">
+                         In non nisi dictum, consectetur dolor in, ultrices neque.
+                      </div>
+                    </span>
+                  </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 color-primary-3" id="socialContainer">
+                      <div>
+                        <span class="bold font18">Sed congue sem in magna tristique finibus.</span>
+                        <span class="glyphicon glyphicon-cloud"></span>
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        <span class="glyphicon glyphicon-film"></span>
+                      </div>
+                    </div>
+                </div>
+                <div class="row" id="galleryContainer">
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                    <div class="col-md-2">
+                      <img src="images/gallery1.jpg" alt="gallery">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 color-complement-4" id="footerContainer">
+                        footer
+                    </div>
+                </div>
+            </div>
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
