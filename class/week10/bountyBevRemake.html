@@ -12,79 +12,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style media="screen">
-        #footerContainer {
-            height: 200px;
-            min-height: 200px;
-            max-height: 200px;
-        }
-
         .container-fluid {
             padding: 0;
         }
-        /*nav  */
 
-        #navContainer {
-            height: 100px;
-            z-index: 1;
-            width: 100%;
-            position: fixed;
-            top: 0;
+        body {
+            overflow-x: hidden !important;
         }
 
-        #nav {
-            background-color: #000;
-            height: 50px;
-            min-height: 50px;
-            max-height: 50px;
-            margin-top: 40px;
-            width: 100%;
-        }
-
-        #navLinks {
-            margin-left: 35%
-        }
-
-        #navLinks a {
-            margin-left: 100px;
-            margin-right: 100px;
-            line-height: 50px;
-            color: #FFF;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        /*sliderContainer*/
-
-        #sliderContainer img {
-            height: 100%;
-            width: 100%;
-        }
-        /*contacts container*/
-
-        #contactContainer {
-            height: 350px;
-            min-height: 350px;
-            max-height: 350px;
-            background-color: #FFF;
-        }
-
-        #contactContainer input {
-            border: 2px solid #ccc;
-            border-right: 0;
-            border-radius: 0;
-            width: 50%;
-            padding: 8px;
-            width: 300px;
-        }
-
-        #contactContainer button {
-            border: 2px solid #ccc;
-            border-radius: 0;
-            background-color: #6a7334;
-            color: #fff;
-            padding: 6px 25px;
-            bottom: 0;
-            font-size: 18px !important;
+        .container-fluiid {
+            max-width: 100% !important;
+            overflow-x: hidden !important;
         }
 
         .font24 {
@@ -107,21 +45,111 @@
             width: 100%;
             text-align: center;
         }
+
+        .glyphicon {
+            font-size: 35px;
+        }
+        /*nav  */
+
+        #navContainer {
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        #nav {
+            /*black strip*/
+            width: 100%;
+            background-color: #000;
+            height: 50px;
+            margin-top: 40px;
+        }
+
+        #navLinksContainer {
+            /*black strip*/
+            margin-left: 35%
+        }
+
+        #navLinksContainer a {
+            margin-left: 100px;
+            margin-right: 100px;
+            line-height: 50px;
+            color: #FFF;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        #badge {
+            position: fixed;
+            z-index: 2;
+            top: 20px;
+            left: 100px;
+            width: 10%;
+        }
+        /*sliderContainer, removed html i didnt want*/
+
+        #sliderContainer {
+            margin-top: 100px;
+            /*avoid the fixed*/
+        }
+
+        #sliderContainer img {
+            /*1665 x 905*/
+            height: 100%;
+            width: 100%;
+        }
+        /*contacts container*/
+
+        #contactContainer {
+            height: 550px;
+            padding-top: 100px;
+            background-color: #FFF;
+            position: relative;
+            /*for the slant*/
+        }
+
+        #contactContainer input {
+            border: 2px solid #ccc;
+            border-right: 0;
+            border-radius: 0;
+            width: 50%;
+            padding: 8px;
+            width: 300px;
+        }
+
+        #contactContainer button {
+            border: 2px solid #ccc;
+            border-radius: 0;
+            background-color: #6a7334;
+            color: #fff;
+            padding: 6px 25px;
+            font-size: 18px;
+        }
+
+        #contactContainer .lowerLeftSideSlant {
+            position: absolute;
+            bottom: 0;
+            left: -20px;
+            width: 33%;
+            height: 50px;
+            transform: skew(43deg);
+        }
         /*cards container*/
 
         #cardsContainer {
             height: 700px;
-            min-height: 700px;
-            max-height: 700px;
         }
 
         #flexContainer {
-            height: 100%;
+            width: 80%;
+            margin: 0 auto;
             display: flex;
+            height: 100%;
             flex-direction: row;
             justify-content: space-between;
-            padding-left: 80px;
-            padding-right: 80px;
             align-items: center;
         }
 
@@ -129,32 +157,61 @@
             text-transform: uppercase;
             width: 300px;
             overflow: hidden;
+            /*keep pics and text in container*/
         }
         /*social container*/
 
         #socialContainer {
-            height: 250px;
-            min-height: 250px;
-            max-height: 250px;
+            height: 300px;
+            position: relative;
+            background-color: #FFF;
         }
 
-        #socialContainer div {
+        #socialInfoContainer {
             padding-top: 100px;
             text-align: center;
+        }
+
+        #socialInfoContainer span {
+            margin-right: 30px;
+        }
+
+        #socialContainer .lowerLeftSideSlant {
+            position: absolute;
+            bottom: 50px;
+            left: -20px;
+            width: 15%;
+            height: 50px;
+            transform: skew(43deg);
+            background-color: #000;
+        }
+
+        #socialLowerBar {
+            position: absolute;
+            bottom: 0;
+            height: 50px;
+            background-color: #000;
+            width: 100%;
+        }
+
+        #socialLowerBar div {
+            margin-left: 300px;
             line-height: 50px;
-        }
-
-        #socialContainer span {
-            margin-right: 30px
-        }
-
-        .glyphicon {
-            font-size: 35px;
+            background-color: #FFF;
+            color: #000;
+            padding-left: 50px;
+            padding-right: 50px;
+            text-transform: uppercase;
+            width: 460px;
+            font-weight: bold;
+            font-size: 20px;
         }
         /*gallery container*/
-        #galleryContainer{
-          background-color: #FFF;
+
+        #galleryContainer {
+            background-color: #FFF;
         }
+
         #galleryContainer img {
             width: 100%;
         }
@@ -165,9 +222,11 @@
         /*footer container*/
 
         #footerContainer {
-            border-top: 20px solid #FFF;
             position: relative;
+            border-top: 20px solid #FFF;
             border-bottom: 50px solid #000;
+            height: 200px;
+            padding-bottom: 180px;
         }
 
         #bottomNavContainer {
@@ -186,19 +245,22 @@
             text-transform: uppercase;
             font-weight: bold;
             margin: 60px;
+            font-size: 24px;
+            color: #FFF;
         }
 
         #copyright {
-            padding-top: 15px;
+            padding-top: 25px;
             font-size: 10px;
+            color: #FFF;
         }
 
         #bottomSocial {
-            background-color: #FFF;
-            height: 80px;
             position: absolute;
             top: 0px;
             right: -20px;
+            background-color: #FFF;
+            height: 80px;
             width: 30%;
             transform: skew(43deg);
         }
@@ -218,38 +280,23 @@
             margin-left: 120px;
         }
 
-        body {
-            overflow-x: hidden !important;
-        }
-
-        .container-fluiid {
-            max-width: 100% !important;
-            overflow-x: hidden !important;
-        }
     </style>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
 </head>
 
 <body class="color-primary-0">
 
     <div class="container-fluid">
-        <div id="stayOnTop">
 
-
-            <div class="color-primary-0" id="navContainer">
-
-                <div id="nav">
-                    <div id="navLinks"><a href="#">link</a><a href="#">link</a><a href="#">link</a><a href="#">link</a></div>
-                </div>
-
-
+        <!--navContainer-->
+        <div class="color-primary-0" id="navContainer">
+            <div id="nav">
+                <div id="navLinksContainer"><a href="#">link</a><a href="#">link</a><a href="#">link</a><a href="#">link</a></div>
             </div>
+            <img id="badge" src="images/badge.png" alt="badge">
         </div>
+
+        <!--sliderContainer-->
         <div class="row">
             <div class="col-md-12 color-secondary-1-0" id="sliderContainer">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -278,16 +325,14 @@
                         <div class="item">
                             <img src="images/image4.jpg" alt="image">
                             <div class="carousel-caption">
-
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
             </div>
         </div>
+
+        <!--contactContainer-->
         <div class="row">
             <div class="col-md-12 color-secondary-2-0" id="contactContainer">
                 <div class="centerText font24 bold" style="padding:10px;">
@@ -309,11 +354,13 @@
                     <input type="text" name="email" value="enter your email">
                     <button type="button">Count me in !</button>
                 </div>
-
                 <div class="centerText font14" style="padding:20px;">
                     Fusce convallis quam in leo finibus, nec condimentum dolor maximus.
                 </div>
+                <div class="lowerLeftSideSlant color-complement-0"></div>
             </div>
+
+
             <div class="row">
                 <div class="col-md-12 color-complement-0" id="cardsContainer">
                     <div id="flexContainer">
@@ -321,7 +368,7 @@
                           <div class="centerText font18" style="padding:5px;">
                             In hendrerit ante hendrerit elit vestibulum finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                           </div>
-                          <div class="centerText font14" style="padding:3px;">
+                          <div class="centerText font14 bold" style="padding:3px;">
                              In non nisi dictum, consectetur dolor in, ultrices neque.
                           </div>
                     </span>
@@ -329,7 +376,7 @@
                       <div class="centerText font18" style="padding:5px;">
                         In hendrerit ante hendrerit elit vestibulum finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
-                      <div class="centerText font14" style="padding:3px;">
+                      <div class="centerText font14 bold" style="padding:3px;">
                          In non nisi dictum, consectetur dolor in, ultrices neque.
                       </div>
                     </span>
@@ -337,7 +384,7 @@
                       <div class="centerText font18" style="padding:5px;">
                         In hendrerit ante hendrerit elit vestibulum finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       </div>
-                      <div class="centerText font14" style="padding:3px;">
+                      <div class="centerText font14 bold" style="padding:3px;">
                          In non nisi dictum, consectetur dolor in, ultrices neque.
                       </div>
                     </span>
@@ -345,12 +392,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 color-primary-3" id="socialContainer">
-                    <div>
+                <div class="col-md-12" id="socialContainer">
+                    <div id="socialInfoContainer">
                         <span class="bold font18">Sed congue sem in magna tristique finibus.</span>
                         <span class="glyphicon glyphicon-cloud"></span>
                         <span class="glyphicon glyphicon-envelope"></span>
                         <span class="glyphicon glyphicon-film"></span>
+                    </div>
+                    <div class="lowerLeftSideSlant">
+
+                    </div>
+                    <div id="socialLowerBar">
+                        <div>
+                            #FREE BEER - Drink responsibly
+                        </div>
                     </div>
                 </div>
             </div>
@@ -397,13 +452,10 @@
                     <div id="bottomNavContainer">
                         <div id="linksContainer"><a href="#">link</a><a href="#">link</a><a href="#">link</a></div>
                         <div id="copyright">
-                            c 2017 this and that
+                            &copy; 2017 this and that
                         </div>
                     </div>
-                    <div id="bottomSocial">
-
-
-                    </div>
+                    <div id="bottomSocial"></div>
                     <div id="bottomSpanContainer">
                         <span class="glyphicon glyphicon-fire"></span>
                         <span class="glyphicon glyphicon-screenshot"></span>
