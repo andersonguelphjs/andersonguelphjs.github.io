@@ -2,134 +2,128 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Posts</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Posts</title>
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
 <style media="screen">
-  .footer {
-    height: 100px;
-    min-height: 100px;
-    max-height: 100px;
-  }
+    .footer {
+        height: 100px;
+        min-height: 100px;
+        max-height: 100px;
+    }
 
-  #posts {
-    min-height: 200px;
-  }
+    #posts,
+    .ads {
+        min-height: 200px;
+    }
 </style>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <ul class="nav nav-tabs nav-justified">
-          <li role="presentation" class="active"><a href="#">Home</a></li>
-          <li role="presentation"><a href="#">Profile</a></li>
-          <li role="presentation"><a href="#">Messages</a></li>
-        </ul>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs nav-justified">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li role="presentation"><a href="#">Messages</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 randomColor ads">
+
+            </div>
+            <div class="col-md-8" id="posts">
+
+            </div>
+            <div class="col-md-2 randomColor ads">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 randomColor footer">
+
+            </div>
+        </div>
+
     </div>
-    <div class="row">
-      <div class="col-md-2 randomColor ads">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-      </div>
-      <div class="col-md-8" id="posts">
+    <script type="text/javascript">
 
-      </div>
-      <div class="col-md-2 randomColor ads">
+    //create data for each post
+        var postsData = [{
+                image: "images/profile1.png",
+                subheading: "it's a beautiful day",
+                content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu varius arcu. Pellentesque nibh quam, posuere vel dolor ultrices, pulvinar eleifend mi. Pellentesque a eros metus. Nam euismod, ex eget pharetra elementum, turpis eros elementum ex, eu convallis leo tortor eu lectus."
+            },
+            {
+                image: "images/profile2.jpg",
+                subheading: "Somthing differnt",
+                content: "ien. Nunc eu neque maximus, tincidunt sapien eget, vulputate quam. Nam vel neque velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sit amet ante mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hillentesque nibh quam, posuere vel dolor ul metus. eu lectus."
+            },
+            {
+                image: "images/profile3.jpg",
+                subheading: "Somthing differnt",
+                content: "ien. Nunc eu neque maximus, tincidunt sapien eget, vulputate quam. Nam vel neque velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sit amet ante mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hillentesque nibh quam, posuere vel dolor ul metus. eu lectus."
+            },
+            {
+                image: "images/profile4.jpg",
+                subheading: "Somthing differnt",
+                content: "ien. Nunc eu neque maximus, tincidunt sapien eget, vulputate quam. Nam vel neque velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sit amet ante mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hillentesque nibh quam, posuere vel dolor ul metus. eu lectus."
+            },
+            {
+                image: "images/profile5.jpg",
+                subheading: "Somthing differnt",
+                content: "ien. Nunc eu neque maximus, tincidunt sapien eget, vulputate quam. Nam vel neque velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sit amet ante mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hillentesque nibh quam, posuere vel dolor ul metus. eu lectus."
+            },
+            {
+                image: "images/profile6.jpg",
+                subheading: "Somthing differnt",
+                content: "ien. Nunc eu neque maximus, tincidunt sapien eget, vulputate quam. Nam vel neque velit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec sit amet ante mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hillentesque nibh quam, posuere vel dolor ul metus. eu lectus."
+            }
+        ];
 
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 randomColor footer">
+        var myHtml = "";
 
-      </div>
-    </div>
-
-  </div>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script>
-    /*
-        function getRandomNumber(min, max) {
-          return Math.floor(Math.random() * max + min);
+//loop through postData and build html string
+        for (var i = 0; i < postsData.length; i = i + 1) {
+            myHtml = myHtml + '<div class="media">' +
+                '<div class="media-left">' +
+                '<a href="#">' +
+                '<img class="media-object" src="' + postsData[i].image + '" alt="...">' +
+                '</a>' +
+                '</div>' +
+                '<div class="media-body">' +
+                '<h4 class="media-heading">' + postsData[i].subheading + '</h4>' +
+                postsData[i].content +
+                '</div>' +
+                '</div>';
         }
+        //write the html string to the screen
+        $(document).ready(function (){
+          $("#posts").html(myHtml);
+        })
 
-        $(document).ready(function() {
-
-          var bodyColumns = $(".randomColor");
-
-          bodyColumns.each(function() {
-
-            $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
-
-          })
-
-          $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+    </script>
 
 
-        })*/
-  </script>
-  <script type="text/javascript">
-
-
-    var data = [{
-        heading: "media heading",
-        body: "Usu option suscipit evertitur ei, has ex appellantur ullamcorper contentiones, possit nemore has no. Per at lucilius salutandi, sint cetero vix id. Et quaeque nonumes expetenda duo, ",
-        src: "images/post1.png"
-      },
-      {
-        heading: "media heading2",
-        body: "Usu option suscipit evertitur ei, has ex appellantur ullamcorper contentiones, possit nemore has no. Per at lucilius salutandi, sint cetero vix id. Et quaeque nonumes expetenda duo, ",
-        src: "images/post1.png"
-      }
-    ];
-
-    $(document).ready(function() {
-      var html = "";
-      $.each(data, function(index, item) {
-        html += '<div class="media">' +
-          '<div class="media-left">' +
-          '<a href="#">' +
-          '<img class="media-object" src="' + item.src + '" alt="post">' +
-          '</a>' +
-          '</div>' +
-          '<div class="media-body">' +
-          '<h4 class="media-heading">' + item.heading + '</h4>' +
-          item.body + '</div>' +
-          '</div>';
-
-      })
-      $("#posts").html(html);
-      /*
-              <div class="media">
-                <div class="media-left">
-                  <a href="#">
-                    <img class="media-object" src="" alt="post">
-                  </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"></h4>
-                </div>
-              </div>
-      */
-
-    })
-  </script>
 </body>
 
 </html>

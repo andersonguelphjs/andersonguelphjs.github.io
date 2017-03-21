@@ -11,9 +11,170 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-<body>
-  
+    <style media="screen">
+        /*nav*/
 
+        #navContainer {
+            height: 100px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+
+        #blackBar {
+            width: 100%;
+            background-color: #000;
+            margin-top: 40px;
+            height: 50px;
+        }
+
+        #linksContainer {
+            margin-left: 40%;
+        }
+
+        #linksContainer a {
+            line-height: 50px;
+            color: #FFF;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-transform: uppercase;
+            font-size: 24px;
+        }
+        #badge{
+          position: fixed;
+          top:0;
+          left:50px;
+          z-index: 2;
+          width:150px;
+        }
+        /*slider*/
+
+        #sliderContainer {
+            margin-top: 100px;
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+        }
+
+        #contactsContainer {
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+        }
+
+        #cardsContainer {
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+        }
+
+        #socialContainer {
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+        }
+
+        #galleryContainer {
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+        }
+
+        #footerContainer {
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+        }
+        /*global css */
+
+        .container-fluid {
+            padding: 0;
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+        }
+
+        body {
+            overflow-x: hidden !important;
+        }
+
+        .font24 {
+            font-size: 24px;
+        }
+
+        .font18 {
+            font-size: 18px;
+        }
+
+        .font14 {
+            font-size: 14px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .centerText {
+            width: 100%;
+            text-align: center;
+        }
+
+        .glyphicon {
+            font-size: 35px;
+        }
+    </style>
+
+</head>
+
+<body class="color-primary-0">
+
+    <div class="container-fluid">
+
+        <div class="color-primary-0" id="navContainer">
+            <div id="blackBar">
+                <div id="linksContainer" class="bold">
+                    <a href="#">link</a>
+                    <a href="#">link</a>
+                    <a href="#">link</a>
+                    <a href="#">link</a>
+                </div>
+            </div>
+
+            <img id="badge" src="images/badge1.png" alt="badge">
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 color-secondary-1-0" id="sliderContainer">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 color-secondary-2-0" id="contactsContainer">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 color-complement-0" id="cardsContainer">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 color-complement-2" id="socialContainer">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 color-secondary-2-0" id="galleryContainer">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 color-secondary-1-4" id="footerContainer">
+
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
