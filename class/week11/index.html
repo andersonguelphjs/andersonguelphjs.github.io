@@ -121,7 +121,10 @@
                     }
                     myHtml += '</div>';
                     myHtml += '</div>';
-                    $("#myContainer").html(myHtml);
+                    $(document).ready(function(){
+                      $("#myContainer").html(myHtml);
+                    })
+                    
                 });
 
             })
