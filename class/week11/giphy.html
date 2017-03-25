@@ -23,8 +23,7 @@
 </head>
 
 <body>
-    <iframe src="http://giphy.com/embed/jTnGaiuxvvDNK" width="480" height="457" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
-    <p><a href="http://giphy.com/gifs/funny-cat-jTnGaiuxvvDNK">via GIPHY</a></p>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -38,8 +37,8 @@
                 var myHtml = ";"
                 for (var i = 0; i < 10; i++) {
                     console.log(data.data[i].embed_url);
-                    myHtml += '<iframe src="' + data.data[i].embed_url + '" width="480" height="457" frameborder="0" class="giphy-embed" allowfullscreen></iframe>' + ' <
-                        p > < a href = "'+data.data[i].embed_url+'" > via GIPHY < /a></p > ';
+                    myHtml += '<iframe src="' + data.data[i].embed_url + '" width="480" height="457" frameborder="0" class="giphy-embed" allowfullscreen></iframe>' +
+                    '<p><a href = "'+data.data[i].embed_url+'" > via GIPHY </a></p>';
                 }
                 $(document).ready(function(){
                   $("body").append(myHtml);
