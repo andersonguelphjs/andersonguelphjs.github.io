@@ -66,8 +66,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
-
-    //create data for each post
+        //create data for each post
         var postsData = [{
                 image: "images/profile1.png",
                 subheading: "it's a beautiful day",
@@ -102,7 +101,7 @@
 
         var myHtml = "";
 
-//loop through postData and build html string
+        //loop through postData and build html string
         for (var i = 0; i < postsData.length; i = i + 1) {
             myHtml = myHtml + '<div class="media">' +
                 '<div class="media-left">' +
@@ -117,10 +116,9 @@
                 '</div>';
         }
         //write the html string to the screen
-        $(document).ready(function (){
-          $("#posts").html(myHtml);
+        $(document).ready(function() {
+            $("#posts").html(myHtml);
         })
-
     </script>
 
 
