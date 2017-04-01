@@ -91,6 +91,20 @@
               console.log("Success");
               console.dir(data);
             })
+            .fail(function(data) {
+                            console.log("Fail "+JSON.stringify(data));
+                            console.dir(data);
+                        })
+
+                        $.get("http://andersonguelphjs.github.io/class/week12/myData.json").done(function(data){
+                          console.log("Successg");
+                          console.dir( $.parseJSON(data));
+                        })
+                        .fail(function(data) {
+                                        console.log("Fail "+JSON.stringify(data));
+                                        console.dir(data);
+                                    })
+
 
     </script>
 </body>
