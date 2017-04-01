@@ -76,13 +76,13 @@
     </script>
 
     <script type="text/javascript">
-        $.get("http://andersonguelphjs.github.io/class/week11/")
+        $.getJSON("http://andersonguelphjs.github.io/class/week12/myData.json")
             .done(function(data) {
                 console.log("Success");
                 console.dir(data);
             })
             .fail(function(data) {
-                console.log("Fail");
+                console.log("Fail "+JSON.stringify(data));
                 console.dir(data);
             })
     </script>
