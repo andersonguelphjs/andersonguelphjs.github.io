@@ -87,19 +87,21 @@
                 console.dir(data);
             })
             */
+            var url = "http://andersonguelphjs.github.io/class/week12/myJson.json";
+            console.log(url);
             $.ajax({
   dataType: "json",
-  url: "http://andersonguelphjs.github.io/class/week11/myJSON.json"
+  url: url
 }).done(function(data){
   console.log("Successa");
-  console.dir( $.parseJSON(data));
+  console.dir(data);
 })
 .fail(function(data) {
                 console.log("Faila "+JSON.stringify(data));
                 console.dir($.parseJSON(data));
             })
 
-            $.getJSON("http://andersonguelphjs.github.io/class/week11/myJSON.json", function (data){
+            $.getJSON(url, function (data){
               console.log("Success");
               console.dir(data);
             })
@@ -108,9 +110,9 @@
                             console.dir(data);
                         })
 
-                        $.get("http://andersonguelphjs.github.io/class/week12/myData.json").done(function(data){
+                        $.get(url).done(function(data){
                           console.log("Successg");
-                          console.dir( $.parseJSON(data));
+                          console.dir(data);
                         })
                         .fail(function(data) {
                                         console.log("Fail "+JSON.stringify(data));
