@@ -1,3 +1,12 @@
 [
-{"name":"AustonMatthews","team":"TOR","position":"C","gamesPlayed":76,"goals":36,"assists":27,"points":62}
+{"name":"AustonMatthews","team":"TOR","position":"C","gamesPlayed":76,"goals":36,"assists":27,"points":62},
+{"name":"PatrikLaine","team":"WPG","position":"R","gamesPlayed":69,"goals":34,"assists":27,"points":61},
+{"name":"WilliamNylander","team":"TOR","position":"C","gamesPlayed":75,"goals":21,"assists":37,"points":58},
+{"name":"MitchellMarner","team":"TOR","position":"C","gamesPlayed":71,"goals":41,"assists":58,"points":},
+{"name":"SebastianAho","team":"CAR","position":"R","gamesPlayed":76,"goals":23,"assists":24,"points":47},
+{"name":"MatthewTkachuk","team":"CGY","position":"L","gamesPlayed":72,"goals":13,"assists":34,"points":47},
+{"name":"ZachWerenski","team":"CBJ","position":"D","gamesPlayed":77,"goals":11,"assists":26,"points":47},
+{"name":"BradySkjei","team":"NYR","position":"D","gamesPlayed":77,"goals":5,"assists":33,"points":38},
+{"name":"AnthonyMantha","team":"DET","position":"R","gamesPlayed":60,"goals":17,"assists":19,"points":36},
+{"name":"ConnorBrown","team":"TOR","position":"R","gamesPlayed":76,"goals":19,"assists":16,"points":35}
 ]
