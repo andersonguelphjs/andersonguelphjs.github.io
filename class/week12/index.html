@@ -22,6 +22,24 @@
             min-height: 700px;
             max-height: 700px;
         }
+#highlightedPlayer{
+  margin-top:20px;
+}
+        #highlightedPlayer img {
+            height: 200px;
+            width: 144px;
+            float: left;
+            margin-bottom:20px;
+        }
+
+        #highlightedPlayer div {
+            padding-top: 5%;
+            padding-left: 40%;
+        }
+
+        #highlightedPlayer span {
+            font-size: 24px;
+        }
     </style>
 
 </head>
@@ -38,7 +56,22 @@
 
             </div>
             <div class="col-md-8 height2 randomColor">
-
+                <div id="highlightedPlayer">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/NHL_Logo_former.svg/996px-NHL_Logo_former.svg.png" />
+                    <div><span>NHL Rookie Scoring race</span></div>
+                </div>
+                <table id="statsTable" class="table table-hover">
+                    <tr>
+                        <th></th>
+                        <th>Player</th>
+                        <th>Team</th>
+                        <th>Pos</th>
+                        <th>GP</th>
+                        <th>G</th>
+                        <th>A</th>
+                        <th>P</th>
+                    </tr>
+                </table>
             </div>
             <div class="col-md-2 height2 randomColor">
 
@@ -76,50 +109,44 @@
     </script>
 
     <script type="text/javascript">
-    /*
-        $.getJSON("http://andersonguelphjs.github.io/class/week12/myData.json")
+        var url = "myJson.json";
+        console.log(url);
+        var dataArray;
+
+        $.getJSON(url)
             .done(function(data) {
-                console.log("Success");
+                console.log("SuccessJ");
                 console.dir(data);
+                dataArray = data;
+                var statsHTML = "";
+                for (var i = 0; i < data.length; i++) {
+                    statsHTML += "<tr data-index='" + i + "'>" +
+                        "<td>" + (i + 1) + "</td>" +
+                        "<td>" + data[i].name + "</td>" +
+                        "<td>" + data[i].team + "</td>" +
+                        "<td>" + data[i].position + "</td>" +
+                        "<td>" + data[i].gamesPlayed + "</td>" +
+                        "<td>" + data[i].goals + "</td>" +
+                        "<td>" + data[i].assists + "</td>" +
+                        "<td>" + data[i].points + "</td>" +
+                        "</tr>"
+                }
+                $("#statsTable").append(statsHTML);
+
+                $("#statsTable").find("td").on("click", function() {
+
+                    var index = $(this).closest("tr").attr("data-index");
+                    console.log("index" + index);
+                    if (index) {
+                        $("#highlightedPlayer").find("img").attr("src", dataArray[index].image);
+                        $("#highlightedPlayer").find("div").html("<span>" + dataArray[index].name + "</span><br>" + dataArray[index].details);
+                    }
+                })
             })
             .fail(function(data) {
-                console.log("Fail "+JSON.stringify(data));
+                console.log("Fail " + JSON.stringify(data));
                 console.dir(data);
             })
-            */
-            var url = "http://andersonguelphjs.github.io/class/week12/myJson.json";
-            console.log(url);
-            $.ajax({
-  dataType: "json",
-  url: url
-}).done(function(data){
-  console.log("Successa");
-  console.dir(data);
-})
-.fail(function(data) {
-                console.log("Faila "+JSON.stringify(data));
-                console.dir($.parseJSON(data));
-            })
-
-            $.getJSON(url, function (data){
-              console.log("Success");
-              console.dir(data);
-            })
-            .fail(function(data) {
-                            console.log("Fail "+JSON.stringify(data));
-                            console.dir(data);
-                        })
-
-                        $.get(url).done(function(data){
-                          console.log("Successg");
-                          console.dir(data);
-                        })
-                        .fail(function(data) {
-                                        console.log("Fail "+JSON.stringify(data));
-                                        console.dir(data);
-                                    })
-
-
     </script>
 </body>
 

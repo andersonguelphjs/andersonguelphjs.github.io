@@ -1,12 +1,111 @@
-[
-{"name":"AustonMatthews","team":"TOR","position":"C","gamesPlayed":76,"goals":36,"assists":27,"points":62},
-{"name":"PatrikLaine","team":"WPG","position":"R","gamesPlayed":69,"goals":34,"assists":27,"points":61},
-{"name":"WilliamNylander","team":"TOR","position":"C","gamesPlayed":75,"goals":21,"assists":37,"points":58},
-{"name":"MitchellMarner","team":"TOR","position":"C","gamesPlayed":71,"goals":41,"assists":58,"points":},
-{"name":"SebastianAho","team":"CAR","position":"R","gamesPlayed":76,"goals":23,"assists":24,"points":47},
-{"name":"MatthewTkachuk","team":"CGY","position":"L","gamesPlayed":72,"goals":13,"assists":34,"points":47},
-{"name":"ZachWerenski","team":"CBJ","position":"D","gamesPlayed":77,"goals":11,"assists":26,"points":47},
-{"name":"BradySkjei","team":"NYR","position":"D","gamesPlayed":77,"goals":5,"assists":33,"points":38},
-{"name":"AnthonyMantha","team":"DET","position":"R","gamesPlayed":60,"goals":17,"assists":19,"points":36},
-{"name":"ConnorBrown","team":"TOR","position":"R","gamesPlayed":76,"goals":19,"assists":16,"points":35}
+[{
+        "name": "Auston Matthews",
+        "team": "TOR",
+        "position": "C",
+        "gamesPlayed": 76,
+        "goals": 36,
+        "assists": 27,
+        "points": 62,
+        "image":"http://www.hockeydb.com/ihdb/photos/auston-matthews-2017-38.jpg",
+        "details":"Center -- shoots L<br>Born Sep 17 1997 -- San Ramon, CA <br>[19 yrs. ago] <br>Height 6.02 -- Weight 210 [188 cm/95 kg]"
+    },
+    {
+        "name": "Patrik Laine",
+        "team": "WPG",
+        "position": "R",
+        "gamesPlayed": 69,
+        "goals": 34,
+        "assists": 27,
+        "points": 61,
+        "image":"http://www.hockeydb.com/ihdb/photos/patrik-laine-2017-6378.jpg",
+        "details":"Right Wing -- shoots R<br>Born Apr 19 1998 -- Tampere, Finland <br>[18 yrs. ago] <br>Height 6.04 -- Weight 206 [193 cm/93 kg]"
+    },
+    {
+        "name": "William Nylander",
+        "team": "TOR",
+        "position": "C",
+        "gamesPlayed": 75,
+        "goals": 21,
+        "assists": 37,
+        "points": 58,
+        "image":"http://www.hockeydb.com/ihdb/photos/william-nylander-2017-38.jpg",
+        "details":"Center -- shoots R<br>Born May 1 1996 -- Calgary, ALTA <br>[20 yrs. ago] <br>Height 5.11 -- Weight 174 [180 cm/79 kg]"
+    },
+    {
+        "name": "Mitchell Marner",
+        "team": "TOR",
+        "position": "C",
+        "gamesPlayed": 71,
+        "goals": 17,
+        "assists": 41,
+        "points": 58,
+        "image":"http://www.hockeydb.com/ihdb/photos/mitch-marner-2017-38.jpg",
+        "details":"Right Wing -- shoots R<br>Born May 5 1997 -- Thornhill, ONT <br>[19 yrs. ago] <br>Height 5.11 -- Weight 164 [180 cm/74 kg]"
+    },
+    {
+        "name": "Sebastian Aho",
+        "team": "CAR",
+        "position": "R",
+        "gamesPlayed": 76,
+        "goals": 23,
+        "assists": 24,
+        "points": 47,
+        "image":"http://www.hockeydb.com/ihdb/photos/sebastian-aho-2017-979.jpg",
+        "details":"Left Wing -- shoots L<br>Born Jul 26 1997 -- Rauma, Finland <br>[19 yrs. ago] <br>Height 5.10 -- Weight 176 [178 cm/80 kg]"
+    },
+    {
+        "name": "Matthew Tkachuk",
+        "team": "CGY",
+        "position": "L",
+        "gamesPlayed": 72,
+        "goals": 13,
+        "assists": 34,
+        "points": 47,
+        "image":"http://www.hockeydb.com/ihdb/photos/matthew-tkachuk-2017-43.jpg",
+        "details":"Left Wing -- shoots L<br>Born Dec 11 1997 -- Scottsdale, AZ<br>[19 yrs. ago] <br>Height 6.01 -- Weight 195 [185 cm/88 kg]"
+    },
+    {
+        "name": "Zach Werenski",
+        "team": "CBJ",
+        "position": "D",
+        "gamesPlayed": 77,
+        "goals": 11,
+        "assists": 26,
+        "points": 47,
+        "image":"http://www.hockeydb.com/ihdb/photos/zach-werenski-2017-2330.jpg",
+        "details":"Defense -- shoots L<br>Born Jul 19 1997 -- Grosse Pointe, MI <br>[19 yrs. ago] <br>Height 6.02 -- Weight 214 [188 cm/97 kg]"
+    },
+    {
+        "name": "Brady Skjei",
+        "team": "NYR",
+        "position": "D",
+        "gamesPlayed": 77,
+        "goals": 5,
+        "assists": 33,
+        "points": 38,
+        "image":"http://www.hockeydb.com/ihdb/photos/brady-skjei-2017-48.jpg",
+        "details":"Defense -- shoots L<br>Born Mar 26 1994 -- Lakeville, MN <br>[23 yrs. ago] <br>Height 6.03 -- Weight 206 [191 cm/93 kg]"
+    },
+    {
+        "name": "Anthony Mantha",
+        "team": "DET",
+        "position": "R",
+        "gamesPlayed": 60,
+        "goals": 17,
+        "assists": 19,
+        "points": 36,
+        "image":"http://www.hockeydb.com/ihdb/photos/anthony-mantha-2017-34.jpg",
+        "details":"Right Wing -- shoots L<br>Born Sep 16 1994 -- Longueuil, PQ<br>[22 yrs. ago]<br>Height 6.05 -- Weight 204 [196 cm/93 kg]"
+    },
+    {
+        "name": "Connor Brown",
+        "team": "TOR",
+        "position": "R",
+        "gamesPlayed": 76,
+        "goals": 19,
+        "assists": 16,
+        "points": 35,
+        "image":"http://www.hockeydb.com/ihdb/photos/connor-brown-2017-38.jpg",
+        "details":"Right Wing -- shoots R<br>Born Jan 14 1994 -- Toronto, ONT <br>[23 yrs. ago] <br>Height 5.11 -- Weight 170 [180 cm/77 kg]<br>"
+    }
 ]
