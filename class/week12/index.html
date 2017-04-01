@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 12</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style media="screen">
+        .height1 {
+            height: 100px;
+            min-height: 100px;
+            max-height: 100px;
+        }
+
+        .height2 {
+            height: 700px;
+            min-height: 700px;
+            max-height: 700px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 height1 randomColor">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 height2 randomColor">
+
+            </div>
+            <div class="col-md-8 height2 randomColor">
+
+            </div>
+            <div class="col-md-2 height2 randomColor">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 height1 randomColor">
+
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * max + min);
+        }
+
+        $(document).ready(function() {
+
+            var bodyColumns = $(".randomColor");
+
+            bodyColumns.each(function() {
+
+                $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+            })
+
+            $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
+
+
+        })
+    </script>
+
+    <script type="text/javascript">
+        $.get("http://andersonguelphjs.github.io/class/week11/")
+            .done(function(data) {
+                console.log("Success");
+                console.dir(data);
+            })
+            .fail(function(data) {
+                console.log("Fail");
+                console.dir(data);
+            })
+    </script>
+</body>
+
+</html>
