@@ -76,6 +76,7 @@
     </script>
 
     <script type="text/javascript">
+    /*
         $.getJSON("http://andersonguelphjs.github.io/class/week12/myData.json")
             .done(function(data) {
                 console.log("Success");
@@ -85,6 +86,12 @@
                 console.log("Fail "+JSON.stringify(data));
                 console.dir(data);
             })
+            */
+            $.getJSON("http://andersonguelphjs.github.io/class/week12/myData.json", function (data){
+              console.log("Success");
+              console.dir(data);
+            })
+
     </script>
 </body>
 
