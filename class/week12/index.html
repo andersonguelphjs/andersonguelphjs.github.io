@@ -9,8 +9,11 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
     <style media="screen">
+    body{
+      font-family: 'Coda', cursive;
+    }
         .height1 {
             height: 100px;
             min-height: 100px;
@@ -22,14 +25,15 @@
             min-height: 700px;
             max-height: 700px;
         }
-#highlightedPlayer{
-  margin-top:20px;
-}
+
+        #highlightedPlayer {
+            margin-top: 20px;
+        }
+
         #highlightedPlayer img {
             height: 200px;
-            width: 144px;
             float: left;
-            margin-bottom:20px;
+            margin-bottom: 20px;
         }
 
         #highlightedPlayer div {
@@ -39,6 +43,7 @@
 
         #highlightedPlayer span {
             font-size: 24px;
+            text-transform: uppercase;
         }
     </style>
 
@@ -55,7 +60,7 @@
             <div class="col-md-2 height2 randomColor">
 
             </div>
-            <div class="col-md-8 height2 randomColor">
+            <div class="col-md-8 height2">
                 <div id="highlightedPlayer">
                     <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/NHL_Logo_former.svg/996px-NHL_Logo_former.svg.png" />
                     <div><span>NHL Rookie Scoring race</span></div>
@@ -102,7 +107,6 @@
 
             })
 
-            $("body").css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
 
 
         })
