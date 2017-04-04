@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,149 +8,20 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
-    <style media="screen">
-    body{
-      font-family: 'Coda', cursive;
-    }
-        .height1 {
-            height: 75px;
-            min-height: 75px;
-            max-height: 75px;
-        }
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-        .height2 {
-            height: 800px;
-            min-height: 800px;
-            max-height: 800px;
-        }
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
 
-        #highlightedPlayer {
-            margin-top: 20px;
-        }
-
-        #highlightedPlayer img {
-            height: 200px;
-            float: left;
-            margin-bottom: 20px;
-        }
-
-        #highlightedPlayer div {
-            padding-top: 5%;
-            padding-left: 40%;
-        }
-
-        #highlightedPlayer span {
-            font-size: 24px;
-            text-transform: uppercase;
-        }
-    </style>
-
-</head>
-
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 height1 randomColor">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2 height2 randomColor">
-
-            </div>
-            <div class="col-md-8 height2">
-                <div id="highlightedPlayer">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/NHL_Logo_former.svg/996px-NHL_Logo_former.svg.png" />
-                    <div><span>NHL Rookie Scoring race</span></div>
-                </div>
-                <table id="statsTable" class="table table-hover">
-                    <tr>
-                        <th></th>
-                        <th>Player</th>
-                        <th>Team</th>
-                        <th>Pos</th>
-                        <th>GP</th>
-                        <th>G</th>
-                        <th>A</th>
-                        <th>P</th>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-md-2 height2 randomColor">
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 height1 randomColor">
-
-            </div>
-        </div>
-    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        function getRandomNumber(min, max) {
-            return Math.floor(Math.random() * max + min);
-        }
-
-        $(document).ready(function() {
-
-            var bodyColumns = $(".randomColor");
-
-            bodyColumns.each(function() {
-
-                $(this).css("background-color", "rgb(" + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + "," + getRandomNumber(0, 255) + ")");
-
-            })
-
-
-
-        })
-    </script>
-
-    <script type="text/javascript">
-        var url = "https://andersonguelphjs.github.io/class/week12/myJson.json";
-        console.log(url);
-        var dataArray;
-
-        $.getJSON(url)
-            .done(function(data) {
-                console.log("SuccessJ");
-                console.dir(data);
-                dataArray = data;
-                var statsHTML = "";
-                for (var i = 0; i < data.length; i++) {
-                    statsHTML += "<tr data-index='" + i + "'>" +
-                        "<td>" + (i + 1) + "</td>" +
-                        "<td>" + data[i].name + "</td>" +
-                        "<td>" + data[i].team + "</td>" +
-                        "<td>" + data[i].position + "</td>" +
-                        "<td>" + data[i].gamesPlayed + "</td>" +
-                        "<td>" + data[i].goals + "</td>" +
-                        "<td>" + data[i].assists + "</td>" +
-                        "<td>" + data[i].points + "</td>" +
-                        "</tr>"
-                }
-                $("#statsTable").append(statsHTML);
-
-                $("#statsTable").find("td").on("click", function() {
-
-                    var index = $(this).closest("tr").attr("data-index");
-                    console.log("index" + index);
-                    if (index) {
-                        $("#highlightedPlayer").find("img").attr("src", dataArray[index].image);
-                        $("#highlightedPlayer").find("div").html("<span>" + dataArray[index].name + "</span><br>" + dataArray[index].details);
-                    }
-                })
-            })
-            .fail(function(data) {
-                console.log("Fail " + JSON.stringify(data));
-                console.dir(data);
-            })
-    </script>
-</body>
-
+  </body>
 </html>
