@@ -71,14 +71,13 @@
 
 //make the
     function makeDiv(text) {
-      var divsize = ((Math.random() * 100) + 50).toFixed();
       var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
       var newdiv = $('<div/>').css({
         'background-color': color
       });
 
-      var posx = (Math.random() * ($(document).width() - divsize)).toFixed();
-      var posy = (Math.random() * ($(document).height() - divsize)).toFixed();
+      var posx = Math.random() * $(document).width().toFixed();
+      var posy = Math.random() * $(document).height().toFixed();
 
       newdiv.html(text).css({
         'position': 'absolute',
