@@ -21,11 +21,7 @@
 
     div {
       color: white;
-      text-shadow: 3px 3px 0 #000,
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
       text-align: center;
       font-size: 2em;
       box-shadow: 1px 4px 10px 0px rgba(119, 119, 119, 0.91);
@@ -49,7 +45,7 @@
       "An auto trader catalogue", "A list of concert listings", "Info about Hockey players", "A bunch of product information", "Employee profiles", "Salary", "Weight", "Address", "Credit card number", "Email address"
     ];
 
-//add <br> if length > max
+    //add <br> if length > max
     function breakLine(max, text) {
       var newWord = "";
       var count = 0;
@@ -69,16 +65,21 @@
       return newWord;
     }
 
-//make the
+    //make the
     function makeDiv(text) {
       var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
       var newdiv = $('<div/>').css({
         'background-color': color
       });
 
-      var posx = Math.random() * $(document).width().toFixed();
-      var posy = Math.random() * $(document).height().toFixed();
-
+      var posx = Math.random() * $(document).width().toFixed() - 150;
+      var posy = Math.random() * $(document).height().toFixed() - 150;
+      if (posx < 100) {
+        posx = 100;
+      }
+      if (posy < 100) {
+        posy = 100;
+      }
       newdiv.html(text).css({
         'position': 'absolute',
         'left': posx + 'px',
@@ -91,7 +92,6 @@
         makeDiv(breakLine(10, arr[i]));
       }
     })
-
   </script>
 </body>
 
