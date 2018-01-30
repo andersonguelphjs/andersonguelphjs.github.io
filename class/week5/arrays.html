@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrays</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style media="screen">
+    .arrayElement {
+      color: white;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      text-align: center;
+      font-size: 2em;
+      box-shadow: 1px 4px 10px 0px rgba(119, 119, 119, 0.91);
+      -moz-box-shadow: 1px 4px 10px 0px rgba(119, 119, 119, 0.91);
+      -webkit-box-shadow: 1px 4px 10px 0px rgba(119, 119, 119, 0.91);
+      padding: 15px;
+      margin: 10px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .glyphicon {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 0.6em;
+    }
+
+    .flexSpaceAround {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .data{
+      width: 200px;
+      margin: 0 auto;
+    }
+    .arrayInfo, .thisElement{
+      font-size: 3em;
+      font-weight: bold;
+      text-align: center;
+      max-width: 800px;
+    }
+    .index{
+      font-size: 0.7em;
+    }
+    .myFlex{
+      display: flex;
+flex-direction: column;
+align-items: center;
+/* flex-wrap: wrap; */
+justify-content: space-around;
+min-height: 700px;
+max-height: 700px;
+width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="myFlex">
+
+
+    <div class="row">
+      <div class="col-md-12">
+<div class="arrayInfo">
+myArray = [];
+</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 array">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 arrayText">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input class="form-control data" type="text" placeholder="put some text">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 thisElement">
+
+      </div>
+    </div>
+        </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var myArray=[];
+      function numberElements() {
+        myArray.length=0;
+        $(".index").remove();
+        var allElements = $(".arrayElement");
+        $.each(allElements, function(index, item) {
+          myArray.push($(item).text());
+          $(item).prepend("<div class='index'>" + index + "</div>");
+        });
+        $(".arrayInfo").html("myArray = " +breakLine(35,JSON.stringify(myArray),true)+";");
+      }
+
+      function breakLine(max, text, breakAnyway) {
+        var newWord = "";
+        var count = 0;
+        for (var i = 0; i < text.length; i++) {
+          count++;
+          if (count < max) {
+            newWord += text.charAt(i);
+            continue;
+          }
+
+          if (text.charAt(i) === " " || breakAnyway) {
+            newWord += "<br>";
+            count = 0;
+            continue;
+          }
+          newWord += text.charAt(i);
+        }
+        return newWord;
+      }
+
+      $(".data").on("keyup", function(event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          var data = $(".data").val();
+          if (data) {
+            var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
+            var newDiv = $('<div/>').css({
+              'background-color': color
+            }).addClass("arrayElement").html("<span class='glyphicon glyphicon-remove'></span>" + breakLine(10, data));
+            $(".array").append(newDiv);
+            $(".data").val("");
+            numberElements();
+
+          }
+        }
+      })
+      $("body").on("click", ".glyphicon", function() {
+        $(this).closest(".arrayElement").remove();
+        numberElements();
+      });
+      $("body").on("mouseover", ".arrayElement", function() {
+        var i = $(this).index();
+        $(".thisElement").html("<div>myArray["+i+"] = "+myArray[i]+";</div>");
+      })
+      .on("mouseout", ".arrayElement", function() {
+        $(".thisElement").find("div").fadeOut();
+      })
+      ;
+    });
+  </script>
+</body>
+
+</html>
