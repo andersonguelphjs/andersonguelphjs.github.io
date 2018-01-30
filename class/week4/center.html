@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Center</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style media="screen">
+    .height1 {
+      height: 200px;
+    }
+
+    .fitHeightWidth {
+      height: 100%;
+      width: 100%;
+    }
+
+    .relativeParent {
+      position: relative;
+    }
+
+    .absoluteChild {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .flexSpaceBetween {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+    }
+    .flexSpaceAround {
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 height1">
+        <img src="img/square1.jpg" class="fitHeightWidth" alt="square">
+      </div>
+      <div class="col-md-3 height1 relativeParent">
+        <img src="img/square2.jpg" class="absoluteChild" alt="square">
+      </div>
+      <div class="col-md-3 height1 flex">
+        <img src="img/square2.jpg" alt="square">
+      </div>
+      <div class="col-md-3 height1 randomColor">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height1 flexSpaceAround">
+        <img src="img/square2.jpg" alt="square">
+        <img src="img/square2.jpg" alt="square">
+        <img src="img/square2.jpg" alt="square">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 height1 randomColor">
+
+      </div>
+      <div class="col-md-3 height1 randomColor">
+
+      </div>
+      <div class="col-md-3 height1 randomColor">
+
+      </div>
+      <div class="col-md-3 height1 randomColor">
+
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //get a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      var randomColor = $(".randomColor");
+
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+    /*
+fourRows.html
+
+-4 rows
+-one row must span all 12 columns
+-use position (min 2 boxes) and flexSpaceAround,
+flexSpaceBetween and flex (center)
+-in the col-md-12 row at least use a type of flex
+ with multiple items 
+-choose a theme
+-transparent background-color of the images (.png so it blends)
+-page background could be a solid color or a pattern
+-put a title row about your theme
+-use a naming convention for images
+-take out randomColor at the end
+
+link to this page from your home page
+for this week *(Class Week 4)
+
+
+    */
+  </script>
+</body>
+
+</html>
