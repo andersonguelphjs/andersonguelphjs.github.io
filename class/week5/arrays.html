@@ -44,7 +44,9 @@
     }
 
     .arrayInfo,
-    .thisElement {
+    .thisElement,
+    .mirror,
+    .spliceArray {
       font-size: 3em;
       font-weight: bold;
       text-align: center;
@@ -91,8 +93,13 @@
         </div>
       </div>
       <div class="row">
+        <div class="col-md-12 spliceArray">
+
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-12">
-          <input class="form-control data" type="text" placeholder="put some text">
+          <input class="form-control data" type="text" placeholder="push this text to the array"><span class="mirror"></span>
         </div>
       </div>
       <div class="row">
@@ -142,9 +149,10 @@
       }
 
       $(".data").on("keyup", function(event) {
+        var data = $(".data").val();
         if (event.keyCode === 13) {
           event.preventDefault();
-          var data = $(".data").val();
+
           if (data) {
             var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
             var newDiv = $('<div/>').css({
@@ -152,15 +160,25 @@
             }).addClass("arrayElement").html("<span class='glyphicon glyphicon-remove'></span>" + breakLine(10, data));
             $(".array").append(newDiv);
             $(".data").val("");
+            $(".mirror").html("");
             numberElements();
 
           }
+        } else if (data && data.length > 0) {
+          $('.mirror').html('myArray.push("' + data + '")');
         }
       })
       $("body").on("click", ".glyphicon", function() {
         $(this).closest(".arrayElement").remove();
         numberElements();
       });
+      $("body").on("mouseover", ".glyphicon", function() {
+          var index = $(this).closest(".arrayElement").index();
+          $(".spliceArray").html("<div>myArray.splice(" + index + ",1)</div>");
+        })
+        .on("mouseout", ".glyphicon", function() {
+          $(".spliceArray").find("div").fadeOut();
+        });;
       $("body").on("mouseover", ".arrayElement", function() {
           var i = $(this).index();
           $(".thisElement").html("<div>myArray[" + i + "] = " + myArray[i] + ";</div>");
