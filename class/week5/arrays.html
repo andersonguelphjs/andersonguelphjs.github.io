@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <style media="screen">
+  body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-image: url("pattern.png");
+    background-repeat: repeat;
+  }
     .arrayElement {
       color: white;
       text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -139,6 +144,7 @@
           }
 
           if (text.charAt(i) === " " || breakAnyway) {
+            newWord += text.charAt(i);
             newWord += "<br>";
             count = 0;
             continue;
