@@ -180,7 +180,7 @@
       });
       $("body").on("mouseover", ".glyphicon", function() {
           var index = $(this).closest(".arrayElement").index();
-          $(".spliceArray").html("<div>myArray.splice(" + index + ",1)</div>");
+          $(".spliceArray").html("<div>myArray.splice(" + index + ",1);</div>");
         })
         .on("mouseout", ".glyphicon", function() {
           $(".spliceArray").find("div").fadeOut();
