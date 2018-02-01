@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Objects</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style media="screen">
+    .arrayElement {
+      color: white;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+      text-align: center;
+      font-size: 2em;
+      box-shadow: 1px 4px 10px 0px rgba(119, 119, 119, 0.91);
+      -moz-box-shadow: 1px 4px 10px 0px rgba(119, 119, 119, 0.91);
+      -webkit-box-shadow: 1px 4px 10px 0px rgba(119, 119, 119, 0.91);
+      padding: 15px;
+      margin: 10px;
+    }
+
+    .textAlignCenter {
+      text-align: center;
+    }
+
+    .myInputs input {
+      width: 100px;
+      margin-right: 10px;
+      display: inline;
+    }
+
+    .myCanvas {
+      position: relative;
+    }
+
+    #c {
+      position: absolute;
+    }
+
+    img {
+      width: 30%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    .myObject, .keyValue{
+      font-size: 3em;
+      font-weight: bold;
+      text-align: center;
+    }
+    .myObject{
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      background-image: url("pattern.png");
+      background-repeat: repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 myCanvas">
+        <img src="car.png" alt="car">
+        <canvas id="c" width="1100" height="500" style="border:1px solid #ccc"></canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 newElement">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="textAlignCenter keyValue">
+          Key : Value
+        </div>
+        <div class="myInputs textAlignCenter">
+          <input type="text" class="form-control myKey">
+          <input type="text" class="form-control myValue">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="myObject">
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.22/fabric.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var myObject = {};
+      writeObject();
+      $("img").draggable();
+      var canvas = new fabric.Canvas('c', {
+        selection: false
+      });
+
+      function writeObject() {
+
+        $(".myObject").html("var myObject = " + JSON.stringify(myObject,2,2) + ";");
+      }
+      var line, isDown;
+
+      canvas.on('mouse:down', function(o) {
+        isDown = true;
+        var pointer = canvas.getPointer(o.e);
+        var points = [pointer.x, pointer.y, pointer.x, pointer.y];
+        line = new fabric.Line(points, {
+          strokeWidth: 5,
+          fill: 'red',
+          stroke: 'red',
+          originX: 'center',
+          originY: 'center'
+        });
+        canvas.add(line);
+      });
+
+      canvas.on('mouse:move', function(o) {
+        if (!isDown) return;
+        var pointer = canvas.getPointer(o.e);
+        line.set({
+          x2: pointer.x,
+          y2: pointer.y
+        });
+        canvas.renderAll();
+      });
+
+      canvas.on('mouse:up', function(o) {
+        isDown = false;
+      });
+
+      $(".myKey, .myValue").on("keyup", function(event) {
+        var myKey = $(".myKey").val();
+        var myValue = $(".myValue").val();
+        if (event.keyCode === 13) {
+          event.preventDefault();
+
+          if (myKey && myValue) {
+            var color = '#' + Math.round(0xffffff * Math.random()).toString(16);
+            var newDiv = $('<span/>').css({
+              'background-color': color
+            }).addClass("arrayElement").text("KEY: " + myKey + " VALUE: " + myValue).draggable();
+            $(".newElement").append(newDiv);
+            $(".myKey,.myValue").val("");
+            myObject[myKey] = myValue;
+            writeObject();
+          }
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>
