@@ -49,15 +49,19 @@
       transform: translate(-50%, -50%);
       z-index: -1;
     }
-    .myObject, .keyValue{
+
+    .myObject,
+    .keyValue {
       font-size: 3em;
       font-weight: bold;
       text-align: center;
     }
-    .myObject{
+
+    .myObject {
       max-width: 800px;
       margin: 0 auto;
     }
+
     body {
       font-family: Helvetica, Arial, sans-serif;
       background-image: url("pattern.png");
@@ -70,7 +74,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 myCanvas">
-        <img class="objImg" src="car.png" alt="car">
+        <img class="objImg" src="img/car.png" alt="car">
         <canvas id="c" width="1100" height="500" style="border:1px solid #ccc"></canvas>
       </div>
     </div>
@@ -109,74 +113,59 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      var imgArr =[];
-      var imgUrls =["car.png","poke.jpg","pizza.png","flower.png","patrick.png","netflix.png","dog.png","donut.png","art.jpg","kokichi.gif","fedoraHat.png","ariana4.png","george-president.png","cake.png"];
-      for (var i=0;i<imgUrls.length;i++){
+      var imgArr = [];
+      var imgUrls = ["img/car.png", "img/poke.jpg", "img/pizza.png", "img/flower.png", "img/patrick.png", "img/netflix.png", "img/dog.png", "img/donut.png", "img/art.jpg", "img/kokichi.gif", "img/fedoraHat.png", "img/ariana4.png",
+        "img/george-president.png", "img/cake.png"
+      ];
+      var key = {
+        LEFT: 37,
+        RIGHT: 39
+      };
+      for (var i = 0; i < imgUrls.length; i++) {
         var img = new Image();
         img.src = imgUrls[i];
         imgArr.push(img);
       }
       var imgIndex = 0;
-      function setImg(){
-        if (imgIndex<0){
-          imgIndex=imgArr.length-1;
+
+      function setImg() {
+        if (imgIndex < 0) {
+          imgIndex = imgArr.length - 1;
+        } else if (imgIndex === imgArr.length) {
+          imgIndex = 0;
         }
-        else if (imgIndex === imgArr.length)
-        {
-          imgIndex=0;
-        }
-        console.log("imgIndex "+imgIndex);
-        $(".objImg").attr("src",imgArr[imgIndex].src);
+        console.log("imgIndex " + imgIndex);
+        $(".objImg").attr("src", imgArr[imgIndex].src);
       }
       setImg(imgIndex);
-      var Key = {
-        LEFT:   37,
-        UP:     38,
-        RIGHT:  39,
-        DOWN:   40
-      };
 
-      /**
-       * old IE: attachEvent
-       * Firefox, Chrome, or modern browsers: addEventListener
-       */
-      function _addEventListener(evt, element, fn) {
-        if (window.addEventListener) {
-          element.addEventListener(evt, fn, false);
-        }
-        else {
-          element.attachEvent('on'+evt, fn);
-        }
-      }
 
       function handleKeyboardEvent(evt) {
-        if (!evt) {evt = window.event;} // for old IE compatible
+        if (!evt) {
+          evt = window.event;
+        } // for old IE compatible
         var keycode = evt.keyCode || evt.which; // also for cross-browser compatible
 
-        var info = document.getElementById("info");
+        var info = $("#info");
 
         switch (keycode) {
-          case Key.LEFT:
-            console.log( "LEFT ");
+          case key.LEFT:
             imgIndex--;
+            setImg();
+            break;
 
-            break;
-          case Key.UP:
-            console.log( "UP ");
-            break;
-          case Key.RIGHT:
-            console.log( "RIGHT ");
+          case key.RIGHT:
             imgIndex++;
-            break;
-          case Key.DOWN:
-            console.log( "DOWN ");
+            setImg();
             break;
           default:
-            imgIndex = 0;
+
         }
-        setImg();
+
       }
+
       $(document).on('keydown', handleKeyboardEvent);
+
       var myObject = {};
       writeObject();
       $("img").draggable();
@@ -186,7 +175,7 @@
 
       function writeObject() {
 
-        $(".myObject").html("var myObject = " + JSON.stringify(myObject,2,2) + ";");
+        $(".myObject").html("var myObject = " + JSON.stringify(myObject, 2, 2) + ";");
       }
       var line, isDown;
 
