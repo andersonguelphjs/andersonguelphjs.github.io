@@ -130,7 +130,7 @@
           myArray.push($(item).text());
           $(item).prepend("<div class='index'>" + index + "</div>");
         });
-        $(".arrayInfo").html("myArray = " + breakLine(35, JSON.stringify(myArray), true) + ";");
+        $(".arrayInfo").html("var myArray = " + breakLine(35, JSON.stringify(myArray), true) + ";");
       }
 
       function breakLine(max, text, breakAnyway) {
