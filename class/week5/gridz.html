@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vert</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style media="screen">
+    .height1 {
+      height: 80px;
+    }
+
+    .height2 {
+      height: 600px;
+    }
+
+    .height3 {
+      height: 150px;
+    }
+
+    .flexVertSpaceAround {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .flexSpaceAround {
+      display: flex;
+      /*  flex-direction: row; */
+      align-items: center;
+      justify-content: space-around;
+    }
+    .lineHeightCenter{
+      line-height: 80px;
+    }
+    .flexCenterSingle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    ul li{
+      list-style: none;
+    }
+    li a {
+      text-transform: uppercase;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .textStyle1{
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 randomColor lineHeightCenter">
+        <ul class="flexSpaceAround">
+          <li><a href="#">Media</a></li>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Links</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 height2 randomColor flexVertSpaceAround">
+        <img src="img/apple.png" alt="apple">
+        <img src="img/apple.png" alt="apple">
+        <img src="img/apple.png" alt="apple">
+      </div>
+      <div class="col-md-8 height2 randomColor">
+        <div class="row">
+          <div class="col-md-6 height3 randomColor flexCenterSingle textStyle1">
+Got Text
+          </div>
+          <div class="col-md-6 height3 randomColor flexCenterSingle textStyle1">
+will travel
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height1 randomColor">
+
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //get a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      var randomColor = $(".randomColor");
+
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+  </script>
+</body>
+
+</html>
