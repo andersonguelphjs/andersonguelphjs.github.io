@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vertical Flex</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style media="screen">
+    .height1 {
+      height: 75px;
+    }
+
+    .height2 {
+      height: 600px;
+    }
+
+    .height3 {
+      height: 150px;
+    }
+
+    .flexSingleItem {
+      /* center the child element*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .flexSpaceAround{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .flexVertSpaceAround{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+    }
+    ul li{
+      list-style: none;
+      text-transform: uppercase;
+    }
+    ul li a,ul li a:hover{
+      text-decoration: none;
+    }
+    .header{
+      line-height: 75px;
+    }
+    /*
+-rebrand the page under your own theme
+-change links, change text, change image
+-use images and text
+-use all the centring classes we made
+-take away randomColor
+-change the grid
+-LINK TO THIS PAGE from home Class Week 5
+    */
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 header">
+        <ul class="flexSpaceAround">
+          <li><a href="#">ABout</a></li>
+          <li><a href="#">home</a></li>
+          <li><a href="#">links</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 height2 randomColor flexVertSpaceAround">
+        <img src="img/redApple.png" alt="apple">
+        <img src="img/redApple.png" alt="apple">
+        <img src="img/redApple.png" alt="apple">
+      </div>
+      <div class="col-md-8 height2 randomColor">
+        <!--put nested rows in here-->
+        <div class="row">
+          <div class="col-md-6 height3 randomColor flexSingleItem">
+            <div>
+              centered
+            </div>
+          </div>
+          <div class="col-md-6 height3 randomColor flexSingleItem">
+            <div>
+              also centered
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+          <div class="col-md-6 height3 randomColor">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 height1 randomColor">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //get a random color between 0 and 255
+      function getRandomColor() {
+        return Math.floor(Math.random() * 255);
+      }
+
+      var randomColor = $(".randomColor");
+
+      $.each(randomColor, function(index, item) {
+        $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+      })
+
+    })
+  </script>
+</body>
+
+</html>
