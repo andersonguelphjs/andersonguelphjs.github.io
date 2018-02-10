@@ -185,5 +185,5 @@ nav, .nav .open>a, .nav .open>a:focus {
 
 h1 {
     font-size: 60px;
-    text-shadow: 0 3px 3px rgba(0, 0, 0, .5);
+    text-shadow: 0 3px 3px rgba(0, 0, 0, .9);
 }
