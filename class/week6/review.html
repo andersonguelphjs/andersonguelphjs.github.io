@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Javascript Review Week 6</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+  <style media="screen">
+    .row {
+      visibility: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    body {
+      font-family: 'Anonymous Pro', monospace;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+h1{
+  text-align: center;
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>JavaScript review Week 6</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <span>
+      Declare a variable called cat
+    </span>
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+        var cat;
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        Initialize cat to “Tom”
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+        cat = "Tom";
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5">
+        Change the variable cat to “Morris”
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+cat = "Morris";
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5">
+        Declare a variable isCat to a positive Boolean value
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+var isCat = false;
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5">
+        1. Write a function called outputToConsole that outputs to the console “Morris is a cat”<br> 2. Call the function
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+function outputToConsole(){
+  console.log("Morris is a cat");
+}
+outputToConsole();
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5">
+        1. Write a function called ouputToConsole2 that takes the parameter ‘name’ and outputs the name to console in a sentence.<br> 2. Call the function with a string parameter.
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+function outputToConsole2(name){
+  console.log("The name you entered was " + name);
+}
+outputToConsole2("Tiger");
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5">
+        1. Write a function called nameAndAge that takes 2 parameters ‘name’ and ‘age’ and outputs them in a sentence<br> 2. Call the function with a string and number parameter
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+function nameAndAge(name, age){
+  console.log(name + " is age "+ age);
+}
+nameAndAge("Auston Matthews",20);
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        Declare an array fruits with 6 fruits
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+var fruits = ["mango","papaya","passion fruit","dragon fruit","lychee","nashi"];
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        Output the length of the fruits array;
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+console.log(fruits.length);
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        Write a for loop that outputs each fruit in the array in a sentence
+      </div>
+      <div class="col-md-3">
+        <textarea name="name" class="form-control" rows="3" cols="80"></textarea>
+      </div>
+      <div class="col-md-3">
+        <pre>
+for (var i=0;i&ltfruits.length;i++){
+  console.log("the name of the fruit at this index is "+fruits[i]);
+}
+      </pre>
+      </div>
+      <div class="col-md-1">
+        <button type="button" class="btn btn-default" name="button">Reveal</button>
+      </div>
+    </div>
+
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+    function getRandomColor() {
+      return Math.floor(Math.random() * 256);
+    }
+    $(document).ready(function() {
+
+      var rows = $(".row");
+      $("body").css("background-color", "rgba(0," + getRandomColor() + ",0,0.1)");
+      $.each(rows, function() {
+        $(this).css("background-color", "rgba(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ",0.2)");
+      })
+      $(".row").eq(0).css("visibility", "visible");
+      $(".row").eq(1).css("visibility", "visible").find("pre").hide();
+      $("button").on("click", function() {
+        var row = $(this).closest(".row");
+        row.find("pre").fadeIn();
+        row.next().css("visibility", "visible");
+        row.next().find("pre").hide();
+      })
+    });
+  </script>
+</body>
+
+</html>
