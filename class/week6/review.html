@@ -231,6 +231,7 @@ for (var i=0;i&ltfruits.length;i++){
       })
       $(".row").eq(0).css("visibility", "visible");
       $(".row").eq(1).css("visibility", "visible").find("pre").hide();
+
       $("button").on("click", function() {
         var row = $(this).closest(".row");
         row.find("pre").fadeIn();
