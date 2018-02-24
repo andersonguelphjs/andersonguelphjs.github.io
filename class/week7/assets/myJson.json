@@ -1,0 +1,136 @@
+[{
+        "name": "Nikita Kucherov",
+        "team": "TBL",
+        "position": "C",
+        "gamesPlayed": 61,
+        "goals": 32,
+        "assists": 48,
+        "points": 80,
+        "image":"http://www.hockeydb.com/ihdb/photos/nikita-kucherov-2018-55.jpg",
+        "details":"Right Wing -- shoots L Born Jun 17 1993 -- Moscow, Russia [24 yrs. ago] Height 5.11 -- Weight 178 [180 cm/81 kg]"
+    },
+    {
+        "name": "Johnny Gaudreau",
+        "team": "CGY",
+        "position": "L",
+        "gamesPlayed": 62,
+        "goals": 20,
+        "assists": 53,
+        "points": 73,
+        "image":"http://www.hockeydb.com/ihdb/photos/johnny-gaudreau-2017-43.jpg",
+        "details":"Left Wing -- shoots L Born Aug 13 1993 -- Salem, NJ [24 yrs. ago] Height 5.09 -- Weight 157 [175 cm/71 kg]"
+      },
+    {
+        "name": "Claude Giroux",
+        "team": "PHI`",
+        "position": "C",
+        "gamesPlayed": 61,
+        "goals": 21,
+        "assists": 51,
+        "points": 72,
+        "image":"http://www.hockeydb.com/ihdb/photos/claude-giroux-2018-53.jpg",
+        "details":"Center -- shoots R Born Jan 12 1988 -- Hearst, ONT [30 yrs. ago] Height 5.11 -- Weight 185 [180 cm/84 kg]"
+    },
+    {
+        "name": "Connor McDavid",
+        "team": "EDM",
+        "position": "C",
+        "gamesPlayed": 60,
+        "goals": 27,
+        "assists": 44,
+        "points": 71,
+        "image":"http://www.hockeydb.com/ihdb/photos/connor-mcdavid-2018-41.jpg",
+        "details":"Center -- shoots L Born Jan 13 1997 -- Richmond Hill, ONT [21 yrs. ago] Height 6.01 -- Weight 192 [185 cm/87 kg]"
+    },
+    {
+
+        "name": "Evgeni Malkin",
+        "team": "PIT",
+        "position": "C",
+        "gamesPlayed": 57,
+        "goals": 33,
+        "assists": 37,
+        "points": 79,
+        "image":"http://www.hockeydb.com/ihdb/photos/evgeni-malkin-2018-50.jpg",
+        "details":"Center -- shoots L Born Jul 31 1986 -- Magnitogorsk, Russia [31 yrs. ago] Height 6.03 -- Weight 195 [191 cm/88 kg]"
+    },
+    {
+        "name": "Steven Stamkos",
+        "team": "TBL",
+        "position": "C",
+        "gamesPlayed": 61,
+        "goals": 24,
+        "assists": 45,
+        "points": 69,
+        "image":"http://www.hockeydb.com/ihdb/photos/steven-stamkos-2018-55.jpg",
+        "details":"Center -- shoots R Born Feb 7 1990 -- Markham, ONT [28 yrs. ago] Height 6.01 -- Weight 194 [185 cm/88 kg]"
+    },
+    {
+
+        "name": "Blake Wheeler",
+        "team": "WPG",
+        "position": "R",
+        "gamesPlayed": 60,
+        "goals": 17,
+        "assists": 52,
+        "points": 69,
+        "image":"http://www.hockeydb.com/ihdb/photos/blake-wheeler-2018-6378.jpg",
+        "details":"Right Wing -- shoots R Born Aug 31 1986 -- Plymouth, MN [31 yrs. ago] Height 6.05 -- Weight 225 [196 cm/102 kg]"
+    },
+    {
+        "name": "Alex Ovechkin",
+        "team": "WSH",
+        "position": "L",
+        "gamesPlayed": 61,
+        "goals": 36,
+        "assists": 32,
+        "points": 68,
+        "image":"http://www.hockeydb.com/ihdb/photos/alex-ovechkin-2017-49.jpg",
+        "details":"Left Wing -- shoots R Born Sep 17 1985 -- Moscow, Russia [32 yrs. ago] Height 6.03 -- Weight 235 [191 cm/107 kg]"
+    },
+    {
+        "name": "Jakub Voracek",
+        "team": "PHI",
+        "position": "R",
+        "gamesPlayed": 61,
+        "goals": 13,
+        "assists": 55,
+        "points": 68,
+        "image":"http://www.hockeydb.com/ihdb/photos/jakub-voracek-2018-53.jpg",
+        "details":"Right Wing -- shoots L Born Aug 15 1989 -- Kladno, Czech Rep. [28 yrs. ago] Height 6.02 -- Weight 214 [188 cm/97 kg]"
+    },
+    {
+
+        "name": "Phil Kessel",
+        "team": "PHI",
+        "position": "R",
+        "gamesPlayed": 61,
+        "goals": 24,
+        "assists": 42,
+        "points": 66,
+        "image":"http://www.hockeydb.com/ihdb/photos/phil-kessel-2018-50.jpg",
+        "details":"Right Wing -- shoots R Born Oct 2 1987 -- Madison, WI [30 yrs. ago] Height 6.00 -- Weight 202 [183 cm/92 kg]"
+    },
+    {
+        "name": "Sidney Crosby",
+        "team": "PIT",
+        "position": "C",
+        "gamesPlayed": 61,
+        "goals": 19,
+        "assists": 47,
+        "points": 66,
+        "image":"http://www.hockeydb.com/ihdb/photos/sidney-crosby-2018-50.jpg",
+        "details":"Center -- shoots L Born Aug 7 1987 -- Cole Harbour, NS [30 yrs. ago] Height 5.11 -- Weight 200 [180 cm/91 kg]"
+    },
+    {
+        "name": "Nathan MacKinnon",
+        "team": "COL",
+        "position": "C",
+        "gamesPlayed": 52,
+        "goals": 25,
+        "assists": 40,
+        "points": 65,
+        "image":"http://www.hockeydb.com/ihdb/photos/nathan-mackinnon-2017-690.jpg",
+        "details":"Center -- shoots R Born Sep 1 1995 -- Halifax, NS [22 yrs. ago] Height 6.00 -- Weight 205 [183 cm/93 kg]"
+    }
+]
