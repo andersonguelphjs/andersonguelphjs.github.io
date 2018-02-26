@@ -35,7 +35,7 @@
     <div class="col-md-2 height2 randomColor">
 
     </div>
-    <div class="col-md-8 height2 randomColor">
+    <div class="col-md-8 height2 output">
 
     </div>
     <div class="col-md-2 height2 randomColor">
@@ -164,6 +164,7 @@
         "hairLength":"short",
         "color":"white",
         "isOutdoor":false,
+
         "isFoundInWild":false,
         "age":5,
         "name": "Muncher",
@@ -171,6 +172,29 @@
         "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/cat8.jpg"
 }
 ];
+
+$(document).ready(function(){
+  //$(".output").html("test output");
+  var html="<table class='table table-striped table-hover'>"+
+  "<tr>"+
+    "<th>picture</th>"+
+    "<th>name</th>"+
+    "<th>age</th>"+
+    "<th>owner</th>"+
+    "<th>breed</th>"+
+    "<th>color</th>"+
+    "<th>hair length</th>"+
+    "<th>outdoor ?</th>"+
+    "<th>wild ?</th>"+
+  "</tr>";
+
+//here is the loop
+
+html += "</table>";
+$(".output").html(html);
+
+});
+
 </script>
 
   </body>
