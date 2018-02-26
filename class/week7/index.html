@@ -32,13 +32,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2 height2 randomColor">
+    <div class="col-md-2 randomColor">
 
     </div>
-    <div class="col-md-8 height2 output">
+    <div class="col-md-8 output">
 
     </div>
-    <div class="col-md-2 height2 randomColor">
+    <div class="col-md-2 randomColor">
 
     </div>
   </div>
@@ -84,7 +84,7 @@
   },
   {
     "breed":"panther",
-  "hairlength":"short",
+  "hairLength":"short",
   "color":"black",
   "isOutdoor":true,
   "isFoundInWild":true,
@@ -124,7 +124,7 @@
         "age":4,
         "name":"Magnolia",
         "owner":"Loucas",
-        "imgURL":"http://andersonguelphjs.github.io/class/week7/img/cat4.jpg"
+        "imgUrl":"http://andersonguelphjs.github.io/class/week7/img/cat4.jpg"
 },
 {
       "breed":"Lion",
@@ -140,9 +140,10 @@
 {
   "breed" : "maineCoon",
   "hairLength" : "long",
-  "isIndoor" : true,
+  "isOutdoor" : true,
   "isFoundInWild" : false,
   "age" : 6,
+  "color": "white",
   "name" : "flufferButt",
   "owner" : "shouldBeMine",
   "imgUrl" : "http://andersonguelphjs.github.io/class/week7/img/cat6.jpg"
@@ -169,7 +170,7 @@
         "age":5,
         "name": "Muncher",
         "owner": "Abel",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/cat8.jpg"
+        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/cat9.jpg"
 }
 ];
 
@@ -188,8 +189,21 @@ $(document).ready(function(){
     "<th>wild ?</th>"+
   "</tr>";
 
-//here is the loop
-
+//here is the loop of the array 'cats'
+for(var i=0;i<cats.length;i++){
+  console.log("i "+i);
+  html+= "<tr>"+
+      "<td><img src='"+cats[i].imgUrl+"' /></td>"+
+      "<td>"+cats[i].name+"</td>"+
+      "<td>"+cats[i].age+"</td>"+
+      "<td>"+cats[i].owner+"</td>"+
+      "<td>"+cats[i].breed+"</td>"+
+      "<td>"+cats[i].color+"</td>"+
+      "<td>"+cats[i].hairLength+"</td>"+
+      "<td>"+cats[i].isOutdoor+"</td>"+
+      "<td>"+cats[i].isFoundInWild+"</td>"+
+    "</tr>";
+}
 html += "</table>";
 $(".output").html(html);
 
