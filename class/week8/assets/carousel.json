@@ -1,0 +1,28 @@
+[
+  {
+    "class":"item active",
+    "caption":"skyline",
+    "source":"https://images.unsplash.com/photo-1460494936962-50da3863c15b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e9802a81ef5c00eaf2f3bbb9a7c8bf20&auto=format&fit=crop&w=1055&q=80"
+  },
+  {
+    "class":"item",
+    "caption":"lower east side",
+    "source":"https://images.unsplash.com/photo-1466064947541-371168912a17?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a17704d6ec056c294cf2939511c47971&auto=format&fit=crop&w=1050&q=80"
+  },
+  {
+    "class":"item",
+    "caption":"lower manhattan",
+    "source":"https://images.unsplash.com/photo-1499566727020-881da110a0b0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a4418b9d763f12cab34f582d564c32f2&auto=format&fit=crop&w=1113&q=80"
+  },
+  {
+    "class":"item",
+    "caption":"view from brooklyn",
+    "source":"https://images.unsplash.com/27/winter-view.jpeg?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=710d6595ea5b4aa4b4c6e1ace9d212ca&auto=format&fit=crop&w=967&q=80"
+  },
+  {
+    "class":"item",
+    "caption":"grand central station",
+    "source":"https://images.unsplash.com/photo-1423882503395-8571951e45cc?ixlib=rb-0.3.5&s=f8274c736c35a5f4feac7e6dc849f91a&auto=format&fit=crop&w=1050&q=80"
+  }
+
+]
