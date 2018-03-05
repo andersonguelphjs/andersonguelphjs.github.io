@@ -72,6 +72,29 @@
       "slideClass":"item"
     }
   ];
+
+var slidesHtml="";
+for(var i=0;i<slides.length;i++){
+  console.log("i "+i);
+  slidesHtml+='<div class="'+slides[i].slideClass+'">'
+    +'<img src="'+slides[i].source+'" alt="'+slides[i].alternate+'">'
+    +'<div class="carousel-caption">'
+    +slides[i].caption
+    +'</div>'
+  +'</div>';
+}
+console.log(slidesHtml); 
+
+
+
+$(document).ready(function(){
+  $(".carousel-inner").html(slidesHtml);
+  //we need to explicitly call this with dynamic html
+  $(".carousel").carousel();
+})
+
+
+
 </script>
   </body>
 </html>
