@@ -12,6 +12,12 @@
   <body>
 <div class="container">
   <div class="row">
+    <div class="col-md-12 logo">
+      Chindogu
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-12 flexSpaceAround output">
 
     </div>
@@ -24,6 +30,16 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+    var formHtml="";
+
+    $.get("https://andersonguelphjs.github.io/class/week11/partial.html")
+    .done(function(data){
+      console.log("got partial");
+      formHtml=data;
+    })
+    .fail(function (data){
+      console.log("failed to get partial "+JSON.stringify(data));
+    })
 
     function writeJSONToDom(d){
       var html="";
@@ -62,9 +78,9 @@
     function initEvents(){
       $("body").on("click",".buyButton", function(){
         console.log("click");
-        var item = $(this).closest(".itemContainer").html();
-        console.log(item);
-        $()
+        var item = $(this).closest(".itemContainer");
+        item.find(".buttonContainer").remove()
+        $(".output").html("<div class='itemContainer'>"+item.html()+"</div>"+formHtml);
       })
     }
     getJSON("https://andersonguelphjs.github.io/class/week11/myJSON.json");
