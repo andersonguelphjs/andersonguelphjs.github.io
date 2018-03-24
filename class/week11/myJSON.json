@@ -2,70 +2,60 @@
   "Sheet1": {
     "1": {
       "itemId": 1,
-      "containerClass": "marAndContainer",
       "marAndTitle": "Shoe umbrellas",
       "marAndPrice": "¥800",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu1.jpg"
     },
     "2": {
       "itemId": 2,
-      "containerClass": "marAndContainer",
       "marAndTitle": "Noodle fan",
       "marAndPrice": "¥1200",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu2.jpg"
     },
     "3": {
       "itemId": 3,
-      "containerClass": "marAndContainer",
       "marAndTitle": "Head TP",
       "marAndPrice": "¥650",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu3.jpg"
     },
     "4": {
       "itemId": 4,
-      "containerClass": "marAndContainer",
       "marAndTitle": "Stick butter",
       "marAndPrice": "¥150",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu4.jpg"
     },
     "5": {
       "itemId": 5,
-      "containerClass": "marAndContainer",
       "marAndTitle": "Water catcher",
       "marAndPrice": "¥750",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu5.jpg"
     },
     "6": {
       "itemId": 6,
-      "containerClass": "marAndContainer",
       "marAndTitle": "Eye dropper",
       "marAndPrice": "¥400",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu6.jpg"
     },
     "7": {
       "itemId": 7,
-      "containerClass": "marAndContainer",
       "marAndTitle": "My man",
       "marAndPrice": "¥6000",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu7.jpg"
     },
     "8": {
       "itemId": 8,
-      "containerClass": "marAndContainer",
       "marAndTitle": "Phone Weights",
       "marAndPrice": "¥1300",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu8.jpg"
     },
     "9": {
       "itemId": 9,
-      "containerClass": "marAndContainer",
       "marAndTitle": "Neck milker",
       "marAndPrice": "¥2500",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu9.jpg"
     },
     "10": {
       "itemId": 10,
-      "containerClass": "marAndContainer",
       "marAndTitle": "Baby mop",
       "marAndPrice": "¥1800",
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu10.jpg"
