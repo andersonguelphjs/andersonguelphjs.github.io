@@ -82,6 +82,9 @@
         item.find(".buttonContainer").remove()
         $(".output").html("<div class='itemContainer'>"+item.html()+"</div>"+formHtml);
       })
+      $(".logo").on("click", function(){
+        window.location.reload();
+      })
     }
     getJSON("https://andersonguelphjs.github.io/class/week11/myJSON.json");
     initEvents();
