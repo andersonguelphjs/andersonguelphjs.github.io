@@ -2,63 +2,73 @@
   "Sheet1": {
     "1": {
       "itemID": 1,
-      "marAnd1": "Shoe umbrellas",
-      "marAnd2": "¥800",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu1.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "Shoe umbrellas",
+      "marAndPrice": "¥800",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu1.jpg"
     },
     "2": {
       "itemID": 2,
-      "marAnd1": "Noodle fan",
-      "marAnd2": "¥1200",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu2.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "Noodle fan",
+      "marAndPrice": "¥1200",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu2.jpg"
     },
     "3": {
       "itemID": 3,
-      "marAnd1": "Head TP",
-      "marAnd2": "¥650",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu3.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "Head TP",
+      "marAndPrice": "¥650",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu3.jpg"
     },
     "4": {
       "itemID": 4,
-      "marAnd1": "Stick butter",
-      "marAnd2": "¥150",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu4.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "Stick butter",
+      "marAndPrice": "¥150",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu4.jpg"
     },
     "5": {
       "itemID": 5,
-      "marAnd1": "Water catcher",
-      "marAnd2": "¥750",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu5.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "Water catcher",
+      "marAndPrice": "¥750",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu5.jpg"
     },
     "6": {
       "itemID": 6,
-      "marAnd1": "Eye dropper",
-      "marAnd2": "¥400",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu6.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "Eye dropper",
+      "marAndPrice": "¥400",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu6.jpg"
     },
     "7": {
       "itemID": 7,
-      "marAnd1": "My man",
-      "marAnd2": "¥6000",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu7.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "My man",
+      "marAndPrice": "¥6000",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu7.jpg"
     },
     "8": {
       "itemID": 8,
-      "marAnd1": "Phone Weights",
-      "marAnd2": "¥1300",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu8.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "Phone Weights",
+      "marAndPrice": "¥1300",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu8.jpg"
     },
     "9": {
       "itemID": 9,
-      "marAnd1": "Neck milker",
-      "marAnd2": "¥2500",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu9.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "Neck milker",
+      "marAndPrice": "¥2500",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu9.jpg"
     },
     "10": {
       "itemID": 10,
-      "marAnd1": "Baby mop",
-      "marAnd2": "¥1800",
-      "marAnd3": "andersonguelphjs.github.io/class/week11/img/chindogu10.jpg"
+      "marAndContainer": "",
+      "marAndTitle": "Baby mop",
+      "marAndPrice": "¥1800",
+      "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu10.jpg"
     }
   }
 }
