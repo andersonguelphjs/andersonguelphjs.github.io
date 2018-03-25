@@ -61,13 +61,10 @@ body {
   position: relative;
 }
 .logo:after {
-  content:"chindogu";
+  content:"チンドグﾄﾞﾄコム";
   position: absolute;
   left: 8px;
   top: 32px;
-}
-.logo:after {
-  /*background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;*/
   background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
   background-size: 4px 4px;
   -webkit-background-clip: text;
