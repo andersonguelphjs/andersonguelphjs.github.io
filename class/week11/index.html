@@ -17,24 +17,25 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2 ad1">
 
-    </div>
-    <div class="col-md-8">
+    <div class="col-md-12">
       <select class="selectJSON form-control">
         <option value="https://andersonguelphjs.github.io/class/week11/myJSON.json">Mark 1</option>
         <option value="https://andersonguelphjs.github.io/class/week11/myJSON2.json">Mark 2</option>
       </select>
     </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-2 ad1">
+
+    </div>
+    <div class="col-md-8 flexSpaceAround output">
+
+    </div>
     <div class="col-md-2 ad2">
 
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 flexSpaceAround output">
-
-    </div>
-
   </div>
 
 </div>
@@ -92,20 +93,21 @@
     }
     function writeAds(){
       var ads=[
-        "ad1.jpg",
-        "ad2.jpg",
-        "ad.jpeg",
-        "ad4.jpeg",
-        "ad5.jpg",
-        "ad6.png",
-        "ad7.png",
-        "ad8.jpg",
-        "ad9.png",
-        "ad10.jpg"
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad1.jpeg",
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad2.jpg",
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad.jpeg",
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad4.jpeg",
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad5.jpg",
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad6.png",
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad7.png",
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad8.jpg",
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad9.png",
+        "https://andersonguelphjs.github.io/class/week11/img/ads/ad10.jpg"
       ]
       $(document).ready(function(){
         for(var i=0;i<3;i++){
-          $(".ad1").append("<img src=''>");
+          $(".ad1").append("<img class='ads' src='"+ads[Math.floor(Math.random()*10)]+"'>");
+          $(".ad2").append("<img class='ads' src='"+ads[Math.floor(Math.random()*10)]+"'>");
         }
       })
     }
