@@ -112,7 +112,7 @@
         $.get(url)
           .done(function(data) {
             console.log("success!");
-            console.dir(data.Sheet1);
+            console.dir(data);
             writeJSONToDom(data.Sheet1);
           })
           .fail(function(data) {
@@ -172,6 +172,7 @@
           $(".selectJSON").on("change", function() {
             var url = $(this).val();
             getJSON(url);
+            return false;
           });
 
           $(".selectJSON").change();
