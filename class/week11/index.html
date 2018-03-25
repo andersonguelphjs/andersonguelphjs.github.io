@@ -13,10 +13,23 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 logo">
-      Chindogu
+      Chindogu.com
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-2 ad1">
 
+    </div>
+    <div class="col-md-8">
+      <select class="selectJSON form-control">
+        <option value="https://andersonguelphjs.github.io/class/week11/myJSON.json">Mark 1</option>
+        <option value="https://andersonguelphjs.github.io/class/week11/myJSON2.json">Mark 2</option>
+      </select>
+    </div>
+    <div class="col-md-2 ad2">
+
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-12 flexSpaceAround output">
 
@@ -56,10 +69,13 @@
             html+="<div class='"+key+"'>"+d[jsonObj][key]+"</div>";
           }
         }
-        html+="<div class='buttonContainer'><button type='button' class='buyButton btn-primary btn'>Buy</button></div>";
+        html+="<div class='buttonContainer'><button type='button' class='buyButton btn-default btn'>Buy</button></div>";
         html+="</div>";
       }
-      $(".output").html(html);
+      $(document).ready(function(){
+        $(".output").html(html);
+      })
+
     }
 
     function getJSON(url){
@@ -74,7 +90,25 @@
         console.dir(data);
       })
     }
-
+    function writeAds(){
+      var ads=[
+        "ad1.jpg",
+        "ad2.jpg",
+        "ad.jpeg",
+        "ad4.jpeg",
+        "ad5.jpg",
+        "ad6.png",
+        "ad7.png",
+        "ad8.jpg",
+        "ad9.png",
+        "ad10.jpg"
+      ]
+      $(document).ready(function(){
+        for(var i=0;i<3;i++){
+          $(".ad1").append("<img src=''>");
+        }
+      })
+    }
     function initEvents(){
       $("body").on("click",".buyButton", function(){
         console.log("click");
@@ -85,8 +119,14 @@
       $(".logo").on("click", function(){
         window.location.reload();
       })
+      $(".selectJSON").on("change", function(){
+          var url = $(this).val();
+          getJSON(url);
+      });
+      $(".selectJSON").change();
     }
-    getJSON("https://andersonguelphjs.github.io/class/week11/myJSON.json");
+    //getJSON("https://andersonguelphjs.github.io/class/week11/myJSON.json");
+    writeAds();
     initEvents();
 
     </script>
