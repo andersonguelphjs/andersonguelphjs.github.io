@@ -37,10 +37,13 @@
       <div class="row">
 
         <div class="col-md-12">
-          <select class="selectJSON form-control">
-        <option value="https://andersonguelphjs.github.io/class/week11/myJSON.json">Mark 1</option>
-        <option value="https://andersonguelphjs.github.io/class/week11/myJSON2.json">Mark 2</option>
-      </select>
+          <div class="selectJSON">
+            <span>Choose another product class</span>
+            <select class="selectJSON form-control">
+              <option value="https://andersonguelphjs.github.io/class/week11/myJSON.json">Mark 1</option>
+              <option value="https://andersonguelphjs.github.io/class/week11/myJSON2.json">Mark 2</option>
+            </select>
+          </div>
         </div>
 
       </div>
@@ -140,38 +143,50 @@
       }
 
       function initEvents() {
-        $("body").on("click", ".buyButton", function() {
-          console.log("click");
-          var item = $(this).closest(".itemContainer");
-          item.find(".buttonContainer").remove()
-          $(".output").html("<div class='itemContainer'>" + item.html() + "</div>" + formHtml);
-        });
-        $("body").on("click", ".submit", function() {
+        $(document).ready(function (){
 
-          var username = $(".username").val();
-          var password = $(".password").val();
-          console.log("submit u: "+username+" p: "+password);
+          $("body").on("click", ".buyButton", function() {
+            console.log("click");
+            var item = $(this).closest(".itemContainer");
+            item.find(".buttonContainer").remove()
+            $(".output").html("<div class='itemContainer'>" + item.html() + "</div>" + formHtml);
+          });
+          $("body").on("click", ".submit", function() {
 
-          if (username && password){
-            $(".checkoutContainer").html("<div class='ordered'>The item has been ordered. <br>Verificaiton ID#"+Math.floor(Math.random()*100000000)+"</div>" );
-          }
-          else{
-            $(".modal").show();
-          }
+            var username = $(".username").val();
+            var password = $(".password").val();
+            console.log("submit u: "+username+" p: "+password);
 
-        });
-        $(".logo").on("click", function() {
-          window.location.reload();
-        });
-        $(".selectJSON").on("change", function() {
-          var url = $(this).val();
-          getJSON(url);
-        });
-        $(".selectJSON").change();
+            if (username && password){
+              $(".checkoutContainer").html("<div class='ordered'>The item has been ordered. <br>Verification ID#"+Math.floor(Math.random()*100000000)+"</div>" );
+            }
+            else{
+              console.log("modal");
+              $(".modal").modal("show");
+            }
+
+          });
+          $(".logo").on("click", function() {
+            window.location.reload();
+          });
+          $(".selectJSON").on("change", function() {
+            var url = $(this).val();
+            getJSON(url);
+          });
+
+          $(".selectJSON").change();
+          $("body").fadeIn();
+
+
+        })
+
       }
       //getJSON("https://andersonguelphjs.github.io/class/week11/myJSON.json");
       writeAds();
       initEvents();
+
+
+
     </script>
   </body>
 
