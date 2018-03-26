@@ -130,10 +130,13 @@
       for(var jsonObj in d){
         html+="<div data-id='"+jsonObj+"' class='itemContainer'>";
         for (var key in d[jsonObj]){//loop through the keys of each object
+
+          var str = String(d[jsonObj][key]);
+
           if (key==="itemId"){
             continue;//continue mean skip this iteration of the loop
           }
-          if (d[jsonObj][key].indexOf("github")!==-1){
+          if (str.indexOf("github")!==-1){
             //if 'github' text appears in the value (-1 means not found)
             html+="<div class='imageContainer'><img src='https://"+d[jsonObj][key]+"'></div>";
           }
