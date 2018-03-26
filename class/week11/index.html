@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chindogu</title>
-
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
@@ -25,9 +24,12 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
     <div class="container">
       <div class="row">
         <div class="col-md-12 logo">
@@ -37,11 +39,9 @@
       <div class="row">
 
         <div class="col-md-12">
-          <div class="selectJSON">
+          <div class="selectContainer flexSpaceAround">
             <span>Choose another product class</span>
             <select class="selectJSON form-control">
-              <option value="https://andersonguelphjs.github.io/class/week11/myJSON.json">Mark 1</option>
-              <option value="https://andersonguelphjs.github.io/class/week11/myJSON2.json">Mark 2</option>
             </select>
           </div>
         </div>
@@ -59,13 +59,10 @@
         </div>
       </div>
       <div class="row">
-
         <div class="col-md-12 footer">
           <hr>
-          <span>© 2018 Chindogu.com<span>
+          <span>© 2018 Chindogu.com</span>
         </div>
-
-
       </div>
 
     </div>
@@ -75,15 +72,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       var formHtml = "";
-
-      $.get("https://andersonguelphjs.github.io/class/week11/partial.html")
-        .done(function(data) {
-          console.log("got partial");
-          formHtml = data;
-        })
-        .fail(function(data) {
-          console.log("failed to get partial " + JSON.stringify(data));
-        })
 
       function writeJSONToDom(d) {
         var html = "";
@@ -102,10 +90,22 @@
           html += "<div class='buttonContainer'><button type='button' class='buyButton btn-default btn'>Buy</button></div>";
           html += "</div>";
         }
-        $(document).ready(function() {
-          $(".output").html(html);
-        })
 
+          $(".output").html(html);
+
+      }
+
+      function getSelectOptions(){
+        var options =
+          { "Anderson 1":"https://andersonguelphjs.github.io/class/week11/myJSON.json",
+          "Anderson 2":"https://andersonguelphjs.github.io/class/week11/myJSON2.json"}
+        ;
+        var html="";
+
+        for (var key in options){
+          html+="<option value='"+options[key]+"'>"+key+"</option>";
+        }
+        $(".selectJSON").html(html);
       }
 
       function getJSON(url) {
@@ -121,7 +121,7 @@
           })
       }
 
-      function writeAds() {
+      function getAds() {
         var ads = [
           "https://andersonguelphjs.github.io/class/week11/img/ads/ad1.jpeg",
           "https://andersonguelphjs.github.io/class/week11/img/ads/ad2.jpg",
@@ -134,16 +134,13 @@
           "https://andersonguelphjs.github.io/class/week11/img/ads/ad9.png",
           "https://andersonguelphjs.github.io/class/week11/img/ads/ad10.jpeg"
         ]
-        $(document).ready(function() {
           for (var i = 0; i < 3; i++) {
             $(".ad1").append("<img class='ads' src='" + ads[Math.floor(Math.random() * 10)] + "'>");
             $(".ad2").append("<img class='ads' src='" + ads[Math.floor(Math.random() * 10)] + "'>");
           }
-        })
       }
 
       function initEvents() {
-        $(document).ready(function (){
 
           $("body").on("click", ".buyButton", function() {
             console.log("click");
@@ -177,16 +174,21 @@
 
           $(".selectJSON").change();
           $("body").fadeIn();
-
-
-        })
-
       }
-      //getJSON("https://andersonguelphjs.github.io/class/week11/myJSON.json");
-      writeAds();
-      initEvents();
 
-
+    $.get("https://andersonguelphjs.github.io/class/week11/partial.html")
+      .done(function(data) {
+                console.log("got partial");
+                formHtml = data;
+                $(document).ready(function (){
+                    getSelectOptions();
+                    initEvents();
+                    getAds();
+                })
+              })
+      .fail(function(data) {
+                console.log("failed to get partial " + JSON.stringify(data));
+              })
 
     </script>
   </body>

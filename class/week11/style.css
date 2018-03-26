@@ -1,67 +1,10 @@
-
-body{
-  display: none;
-}
-.ordered{
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 30px;
-}
-.ads{
-  width:100%;
-  margin-bottom: 3em;
-}
-.selectJSON{
-  margin: 1em auto 1em auto;
-  width: 200px;
-
-}
-.selectJSON select{
-  width:auto;
-}
-.output{
-  padding-top: 2em;
-}
-.flexSpaceAround{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
- .itemContainer{
-   width:200px;
- }
- .imageContainer{
-   background-color: #333;
-   width: 200px;
-   overflow: hidden;
- }
-
-.marAndTitle{
-  text-align: center;
-    text-transform: uppercase;
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 16px;
-}
-.marAndPrice{
-  text-align: center;
-  font-style: italic;
-  font-size: 11px;
-}
-.checkoutContainer{
-  width:66%;
-}
-.buttonContainer{
-  text-align: center;
-    padding: 10px;
-}
+/*header*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
 @import url(https://fonts.googleapis.com/css?family=Squada+One);
 body {
-  padding: 20px 80px;
+  padding-top: 20px;
   background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
+  display: none;
 }
 .logo {
   font-family: 'Open Sans', sans-serif;
@@ -90,6 +33,79 @@ body {
   display: block;
   text-shadow: none;
 }
+/*footer*/
+hr{
+  border-top:1px solid rgba(0,0,0,.1);
+}
+.footer span{
+  margin: 3em;
+}
+
+/*ads*/
+.ads{
+  width:100%;
+  margin-bottom: 3em;
+}
+
+/*main*/
+.selectContainer{
+  margin: 3em auto 1em auto;
+  width: 50%;
+}
+.selectContainer select{
+  width:auto;
+}
+
+.output{
+  padding-top: 2em;
+}
+
+.flexSpaceAround{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+ .itemContainer{
+   width:200px;
+ }
+ .imageContainer{
+   background-color: #333;
+   width: 200px;
+   overflow: hidden;
+ }
+
+
+/*form*/
+
+.ordered{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+/*mark 1*/
+.marAndTitle{
+  text-align: center;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 16px;
+}
+.marAndPrice{
+  text-align: center;
+  font-style: italic;
+  font-size: 11px;
+}
+.checkoutContainer{
+  width:66%;
+}
+.buttonContainer{
+  text-align: center;
+    padding: 10px;
+}
+/*mark 2*/
 @import url(https://fonts.googleapis.com/css?family=Arvo:700);
 .proAndTitle {
   background-color: #333;
@@ -115,11 +131,4 @@ body {
   padding-top: 16px;
   padding-bottom: 16px;
   border:1px solid #333;
-}
-
-hr{
-  border-top:1px solid rgba(0,0,0,.1);
-}
-.footer span{
-  margin: 3em;
 }
