@@ -6,14 +6,6 @@ body {
   background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
   display: none;
 }
-
-.flexSpaceAround{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-/*header*/
 .logo {
   font-family: 'Open Sans', sans-serif;
   color: #555;
@@ -49,38 +41,51 @@ hr{
   margin: 3em;
 }
 
-/**/
-.ad img{
+/*ads*/
+.ads{
   width:100%;
-  margin-top: 3em;
   margin-bottom: 3em;
 }
-/*selectContainer*/
-.selectContainer{
-  width: 50%;
-  margin: 0 auto;
-  padding-top: 3em;
-  padding-bottom: 2em;
-}
-select{
-  width: auto;
-}
 
-/*output*/
-.itemContainer{
-  width: 200px;
+/*main*/
+.selectContainer{
+  margin: 3em auto 1em auto;
+  width: 50%;
+}
+.selectContainer select{
+  width:auto;
 }
 
 .output{
+  padding-top: 2em;
+}
+
+.flexSpaceAround{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
 }
+ .itemContainer{
+   width:200px;
+ }
+ .imageContainer{
+   background-color: #333;
+   width: 200px;
+   overflow: hidden;
+ }
 
 
-.imageContainer{
-  background-color: #333;
-  width: 200px;
-  overflow: hidden;
+/*form*/
+
+.ordered{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
 }
+
+/*mark 1*/
 .marAndTitle{
   text-align: center;
     text-transform: uppercase;
