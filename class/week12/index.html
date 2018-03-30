@@ -21,6 +21,25 @@
 </head>
 
 <body>
+  <div class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Attention:</h4>
+        </div>
+        <div class="modal-body">
+          <p>Please fill out both fields&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
   <div class="container">
     <div class="row">
       <div class="col-md-12 logo">
@@ -127,8 +146,34 @@
           console.log("click");
           var item = $(this).closest(".itemContainer");
           item.find(".buttonContainer").remove()
-          $(".output").html("<div class='itemContainer'>" + item.html() + "</div>" + formHtml);
+          $(".output").html("<div data-id='"+item.attr("data-id")+"' class='itemContainer'>" + item.html() + "</div>" + formHtml);
         });
+
+        $("body").on("click", ".submit", function() {
+
+          var username = $(".username").val();
+          var password = $(".password").val();
+          console.log("submit u: "+username+" p: "+password);
+
+          if (username && password){
+
+            var saveObj = {
+              "itemId":$(".itemContainer").attr("data-id"),
+              "username":username,
+              "productType":$("select").find("option:selected").text()
+            }
+            $(".checkoutContainer").html("<div class='ordered'>The item has been ordered. <br>Verification ID#"+Math.floor(Math.random()*100000000)+"<br><br>(Send to database)<br>"+JSON.stringify(saveObj)+"</div>" );
+          }
+          else{
+            console.log("modal");
+            $(".modal").modal("show");
+          }
+
+        });
+
+        $(".logo").on("click", function(){
+          window.location.reload();
+        })
 
     }
 
