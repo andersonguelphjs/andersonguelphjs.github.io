@@ -94,7 +94,7 @@ select{
   font-style: italic;
   font-size: 11px;
 }
-form,.checkoutContainer{
+.checkoutContainer{
   width:66%;
 }
 .buttonContainer{
