@@ -122,14 +122,6 @@
           }
           //alert("value "+val);
         })
-
-        $("body").on("click", ".buyButton", function() {
-          console.log("click");
-          var item = $(this).closest(".itemContainer");
-          item.find(".buttonContainer").remove()
-          $(".output").html("<div class='itemContainer'>" + item.html() + "</div>" + formHtml);
-        });
-
     }
 
     function writeJSONToDOM(d){
@@ -163,23 +155,13 @@
         //loop this here
       $(".output").html(html);
     }
-
-    $.get("https://andersonguelphjs.github.io/class/week12/partial.html")
-      .done(function(data) {
-                console.log("got partial");
-                formHtml = data;
-                $(document).ready(function (){
-                    getOptions();
-                    initEvents();
-                    getAds();
-                    $(".selectContainer").find("select").change();
-                    $("body").fadeIn();
-                })
-              })
-      .fail(function(data) {
-                console.log("failed to get partial " + JSON.stringify(data));
-              })
-
+    $(document).ready(function() {
+      getOptions();
+      getAds();
+      initEvents();
+      $(".selectContainer").find("select").change();
+      $("body").fadeIn();
+    })
   </script>
 </body>
 
