@@ -115,7 +115,7 @@ function spawnAnimation() {
 
   var spriteIndex = Math.floor(Math.random() * spriteImages.length + 1) - 1; //get a random index from spriteImages
   var animationImg = new Image(); //make an image object
-  animationImg.src = spriteImages[spriteIndex].url; //get a random sprite sheet
+  animationImg.src = spriteImages[spriteIndex].spriteMapUrl; //get a random sprite sheet
   var scaleRatio = Math.random() * 0.5 + 0.5; //get a random scale
   // add a sprite to the array by returning created sprite with properties; note we use properties from our random item in spriteImages
   return Sprite({
@@ -137,21 +137,21 @@ canvas.width = screen.availWidth;
 canvas.height = screen.availHeight;
 //a bunch of sprite data
 var spriteImages = [{
-    "url": "images/coin-sprite-animation.png",
+    "spriteMapUrl": "images/coin-sprite-animation.png",
     "numFrames": 10,
     "width": 1000,
     "height": 100,
     "name": "coin"
   },
   {
-    "url": "images/Madoka.png",
+    "spriteMapUrl": "images/Madoka.png",
     "numFrames": 8,
     "width": 809,
     "height": 136,
     "name": "girl"
   },
   {
-    "url": "images/catWalking.png",
+    "spriteMapUrl": "images/catWalking.png",
     "numFrames": 12,
     "width": 4800,
     "height": 200,
@@ -159,10 +159,10 @@ var spriteImages = [{
   }
 ];
 var animations = []; //an array to hold the currently existing sprites
-var numAnimations = spriteImages.length; //how many animiations we want on the screen at any one time
+var maxAnimations = spriteImages.length; //how many animiations we want on the screen at any one time
 
 //begin the program, spawn a bunch of animations and we will hold them in animations array
-for (var i = 0; i < numAnimations; i++) {
+for (var i = 0; i < maxAnimations; i++) {
   animations[i] = spawnAnimation(i); //put the image at the end of teh arrayspawnAnimation();
 }
 
