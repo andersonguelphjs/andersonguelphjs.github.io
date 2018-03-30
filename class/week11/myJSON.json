@@ -3,61 +3,61 @@
     "1": {
       "itemId": 1,
       "marAndTitle": "Shoe umbrellas",
-      "marAndPrice": "¥800",
+      "marAndPrice": 800,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu1.jpg"
     },
     "2": {
       "itemId": 2,
       "marAndTitle": "Noodle fan",
-      "marAndPrice": "¥1200",
+      "marAndPrice": 1200,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu2.jpg"
     },
     "3": {
       "itemId": 3,
       "marAndTitle": "Head TP",
-      "marAndPrice": "¥650",
+      "marAndPrice": 650,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu3.jpg"
     },
     "4": {
       "itemId": 4,
       "marAndTitle": "Stick butter",
-      "marAndPrice": "¥150",
+      "marAndPrice": 150,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu4.jpg"
     },
     "5": {
       "itemId": 5,
       "marAndTitle": "Water catcher",
-      "marAndPrice": "¥750",
+      "marAndPrice": 750,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu5.jpg"
     },
     "6": {
       "itemId": 6,
       "marAndTitle": "Eye dropper",
-      "marAndPrice": "¥400",
+      "marAndPrice": 400,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu6.jpg"
     },
     "7": {
       "itemId": 7,
       "marAndTitle": "My man",
-      "marAndPrice": "¥6000",
+      "marAndPrice": 6000,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu7.jpg"
     },
     "8": {
       "itemId": 8,
       "marAndTitle": "Phone Weights",
-      "marAndPrice": "¥1300",
+      "marAndPrice": 1300,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu8.jpeg"
     },
     "9": {
       "itemId": 9,
       "marAndTitle": "Neck milker",
-      "marAndPrice": "¥2500",
+      "marAndPrice": 2500,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu9.jpg"
     },
     "10": {
       "itemId": 10,
       "marAndTitle": "Baby mop",
-      "marAndPrice": "¥1800",
+      "marAndPrice": 1800,
       "marAndImgUrl": "andersonguelphjs.github.io/class/week11/img/chindogu10.jpg"
     }
   }
