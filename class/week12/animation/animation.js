@@ -4,6 +4,7 @@ function animationLoop() {
   var animationsToDestroy = []; //to hold any animations that went off the screen
 
   //tell the browser we want to repaint and when ready use this function
+  //endless loop
   window.requestAnimationFrame(animationLoop);
 
   // Clear the whole canvas
@@ -31,7 +32,7 @@ function Sprite(options) {
   //Sprite object properties
   var that = {}, //holds sprite properties
     frameIndex = 0, //what frame are we on
-    tickCount = 0, //how much time has gone by
+    tickCount = 0, //how much 'time' has gone by
     ticksPerFrame = options.ticksPerFrame || 0, //how many ticks must pass for a channge
     numberOfFrames = options.numberOfFrames || 1; //how many frames in this image
 
@@ -42,13 +43,13 @@ function Sprite(options) {
   that.x = options.x; //where is it on the canvas
   that.y = options.y;
   that.deltaX = Math.floor(Math.random() * 5 + 5); //position change
-  that.deltaX *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
+  that.deltaX *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;//randomize negative or positive
   that.deltaY = Math.floor(Math.random() * 5 + 5);
   that.deltaY *= Math.floor(Math.random() * 2) == 1 ? 1 : -1;
   that.image = options.image;
   that.name = options.name;
   that.scaleRatio = options.scaleRatio;
-  that.destroy = false; //should we destroy it
+  that.destroy = false; //should we destroy it?
 
   //Sprite functions
   //update the properties as time goes
@@ -78,7 +79,7 @@ function Sprite(options) {
       return true;
     }
 
-    //built in function that takes the parameters
+    //built-in function that takes the following parameters
     that.context.drawImage(
       that.image,
       frameIndex * that.width / numberOfFrames,
@@ -158,12 +159,12 @@ var spriteImages = [{
     "name": "cat"
   }
 ];
-var animations = []; //an array to hold the currently existing sprites
-var maxAnimations = spriteImages.length; //how many animiations we want on the screen at any one time
+var animations = []; //an array to hold the currently existing sprite obects
+var maxAnimations = spriteImages.length; //how many animations we want on the screen at any one time
 
 //begin the program, spawn a bunch of animations and we will hold them in animations array
 for (var i = 0; i < maxAnimations; i++) {
-  animations[i] = spawnAnimation(i); //put the image at the end of teh arrayspawnAnimation();
+  animations[i] = spawnAnimation(i); //get a sprite and put it in the array; spawnAnimation returns a Sprite
 }
 
 //animation magic
