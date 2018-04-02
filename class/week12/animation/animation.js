@@ -114,7 +114,7 @@ function destroyAnimation(animation) {
 //create a sprite
 function spawnAnimation() {
 
-  var spriteIndex = Math.floor(Math.random() * spriteImages.length + 1) - 1; //get a random index from spriteImages
+  var spriteIndex = Math.floor(Math.random() * spriteImages.length ); //get a random index from spriteImages
   var animationImg = new Image(); //make an image object
   animationImg.src = spriteImages[spriteIndex].spriteMapUrl; //get a random sprite sheet
   var scaleRatio = Math.random() * 0.5 + 0.5; //get a random scale
@@ -137,7 +137,86 @@ var canvas = document.getElementById("myCanvas"); //where we draw it
 canvas.width = screen.availWidth;
 canvas.height = screen.availHeight;
 //a bunch of sprite data
-var spriteImages = [{
+//katnjo.github.io/class/week12/animation/images/sprite.png
+//loucasl.github.io/class/week12/animation/images/ari.png
+var spriteImages = [
+  {
+    "spriteMapUrl":"https://kiannagram.github.io/class/week12/animation/images/ARTZU.png",
+    "numFrames": 7,
+    "width": 2100,
+    "height": 694,
+    "name": "colour goat"
+  },
+
+  {
+    "spriteMapUrl": "https://amiraarshad.github.io/class/week12/animation/images/liam.png",
+    "numFrames": 7,
+    "width": 2732,
+    "height":1417,
+    "name": "liam"
+  },
+
+  {
+  "spriteMapUrl": "https://sydneygang.github.io/class/images/walk.png",
+  "numFrames": 8,
+  "width": 1472,
+  "height": 325,
+  "name": "walk"
+},
+
+  {
+    "spriteMapUrl":"https://biancabottos.github.io/class/week12/animation/images/sun.png",
+    "numFrames": 6,
+    "width": 500,
+    "height": 100,
+    "name": "sun"
+  },
+
+  {
+    "spriteMapUrl": "https://celiafosch.github.io/class/week12/animation/images/henry.png",
+    "numFrames": 5,
+    "width": 480,
+    "height": 480,
+    "name": "Henry"
+  },
+
+  {
+"spriteMapUrl":"https://sarahellul.github.io/class/week12/animation/images/stitch3.png",
+"numFrames": 8,
+"width": 1928,
+"height": 240,
+"name": "stitch"
+},
+
+  {
+    "spriteMapUrl": "https://loucasl.github.io/class/week12/animation/images/ari.png",
+    "numFrames": 7,
+    "width": 3131,
+    "height": 422,
+    "name": "lightbulb"
+  },
+  {
+    "spriteMapUrl": "https://julianneferr.github.io/class/week12/animation/images/lightbulb.png",
+    "numFrames": 7,
+    "width": 1000,
+    "height": 200,
+    "name": "lightbulb"
+  },
+  {
+    "spriteMapUrl": "https://katnjo.github.io/class/week12/animation/images/sprite.png",
+    "numFrames": 10,
+    "width": 1000,
+    "height": 100,
+    "name": "heart"
+  },
+  {
+    "spriteMapUrl": "https://asukalap.github.io/class/week12/animation/images/heartbeat.png",
+    "numFrames": 10,
+    "width": 1000,
+    "height": 100,
+    "name": "heart"
+  },
+  {
     "spriteMapUrl": "images/coin-sprite-animation.png",
     "numFrames": 10,
     "width": 1000,
